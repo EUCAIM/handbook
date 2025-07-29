@@ -14,7 +14,7 @@ EUCAIM defines two ways of participating as data holders, each with unique capab
 
 A set of legal agreements must be prepared and signed to clearly state the obligations and responsibilities of the parties involved. The process is simpler in the case of Data Transfer Data Holders, as documents related to security and Service Level Agreements are provided by the reference nodes where the data will be deposited. Federated nodes have to provide a guarantee that they can fulfill the security and performance requirements[^5]. [Figure 3](#fig_legaldiagram) graphically shows the information and steps required for the legal framework of EUCAIM. 
 
-[Figure 3](#figur_legaldiagram): Information and steps required to complete the legal framework of EUCAIM.
+![Figure 3: Information and steps required to complete the legal framework of EUCAIM.](figures/image0.png)
 
 It is essential that the data holder provides a contact person of its legal team to be in close communication with the legal team of EUCAIM. A contact point will be assigned during the onboarding process.
 
