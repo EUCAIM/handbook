@@ -8,3 +8,5 @@
 * [6. Option 1: Transfer to Reference Node](Transfer.md)
 * [7. Option 2: Setting up a Federated Node](Federated.md)
 * [8. References](References.md)
+* [A. Annex: Data transfer checklist](DataTransferAnnex.md)
+* [B. Annex: Data sharing checklist](DataSharingAnnex.md)
