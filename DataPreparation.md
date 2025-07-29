@@ -2,9 +2,7 @@
 
 The data compliance to the different tier levels can be performed progressively. The process starts with the extraction, annotation and de-identification of data and it is followed by three steps of standardisation, anonymisation check and quality check. [Figure 6](#fig_dataprep1) shows schematically those steps. 
 
-![][image4]
-
-[Figure 6](#figur_dataprep1): Steps for data preparation. Steps in bold are mandatory
+![Figure 6*: Steps for data preparation. Steps in bold are mandatory.*](figures/image4.png)
 
 The details of the steps will be provided in the following sections, but the outline is the following:
 
@@ -14,8 +12,15 @@ The details of the steps will be provided in the following sections, but the out
 
 For this purpose, several tools have been selected and developed in EUCAIM. [Figure 7](#fig_datatools) shows the main tools selected for this phase. Details on the downloading and usage of the tools are given in the following sections. 
 
-[![][image5]](https://bio.tools/mitk)[![][image6]](https://hub.docker.com/r/mariov687/dicomseg)[![][image7]](https://bio.tools/dicom_file_integrity_checker_by_gibi230)[![][image8]](https://bio.tools/eucaim_dicom_anonymizer)![][image9][![][image10]](https://bio.tools/trace4medicalimagecleaning)  
-![][image11][![][image12]](https://bio.tools/dicom_tags_extractor)[![][image13]](https://bio.tools/eetl_toolset)
+![https://bio.tools/mitk](figures/image6.png)
+![https://hub.docker.com/r/mariov687/dicomseg](figures/image7.png)
+![https://hub.docker.com/r/mariov687/dicomseg](figures/image8.png)
+![https://bio.tools/dicom_file_integrity_checker_by_gibi230](figures/image9.png)
+![https://bio.tools/eucaim_dicom_anonymizer](figures/image10.png)]
+![https://bio.tools/trace4medicalimagecleaning](figures/image11.png)  
+![https://bio.tools/dicom_tags_extractor](figures/image12.png)
+![](figures/image13.png)
+![https://bio.tools/eetl_toolset](figures/image14.png)
 
 [Figure 7](#figur_datatools): Data preparation tools. Click on the thumbnail for more information on the tool.
 
