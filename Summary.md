@@ -7,4 +7,4 @@
 * [5. Data Preparation process](DataPreparation.md)
 * [6. Option 1: Transfer to Reference Node](Transfer.md)
 * [7. Option 2: Setting up a Federated Node](Federated.md)
-* [8. References 28](References.md)
+* [8. References](References.md)
