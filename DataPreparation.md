@@ -2,7 +2,7 @@
 
 The data compliance to the different tier levels can be performed progressively. The process starts with the extraction, annotation and de-identification of data and it is followed by three steps of standardisation, anonymisation check and quality check. [Figure 6](#fig_dataprep1) shows schematically those steps. 
 
-![Figure 6*: Steps for data preparation. Steps in bold are mandatory.*](figures/image4.png)
+![Figure 6*: Steps for data preparation. Steps in bold are mandatory.*](figures/image6.png)
 
 The details of the steps will be provided in the following sections, but the outline is the following:
 
@@ -12,15 +12,15 @@ The details of the steps will be provided in the following sections, but the out
 
 For this purpose, several tools have been selected and developed in EUCAIM. [Figure 7](#fig_datatools) shows the main tools selected for this phase. Details on the downloading and usage of the tools are given in the following sections. 
 
-![https://bio.tools/mitk](figures/image6.png)
-![https://hub.docker.com/r/mariov687/dicomseg](figures/image7.png)
-![https://hub.docker.com/r/mariov687/dicomseg](figures/image8.png)
-![https://bio.tools/dicom_file_integrity_checker_by_gibi230](figures/image9.png)
-![https://bio.tools/eucaim_dicom_anonymizer](figures/image10.png)]
-![https://bio.tools/trace4medicalimagecleaning](figures/image11.png)  
-![https://bio.tools/dicom_tags_extractor](figures/image12.png)
-![](figures/image13.png)
-![https://bio.tools/eetl_toolset](figures/image14.png)
+![https://bio.tools/mitk](figures/image7-mitk.png)
+![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-dcmseg.png)
+![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-nifti.png)
+![https://bio.tools/dicom_file_integrity_checker_by_gibi230](figures/image7-tags.png)
+![https://bio.tools/eucaim_dicom_anonymizer](figures/image7-anon.png)]
+![https://bio.tools/trace4medicalimagecleaning](figures/image7-trace4med.png)  
+![https://bio.tools/dicom_tags_extractor](figures/image7-dcmtag.png)
+![](figures/image7-wiz.png)
+![https://bio.tools/eetl_toolset](figures/image7-etl.png)
 
 [Figure 7](#figur_datatools): Data preparation tools. Click on the thumbnail for more information on the tool.
 
@@ -48,9 +48,8 @@ The preparation of your dataset will follow the steps indicated in [Figure 6](#
   Special attention should be given to **embedded text** in images, that may contain patient-identifiable information, as well as **skull and head images** that pose a risk of patient re-identification. You may need to apply additional de-identification techniques to mitigate this risk.  
 * **Re-identification risk assessment (optional)**: For assessing the risk of re-identification of patients based on your **imaging metadata** before sharing your dataset and further anonymizing your dataset through well known privacy models, you may use the [EUCAIM **Wizard tool**](https://bio.tools/eucaim_wizard_tool). Extraction of imaging metadata to feed the wizard tool is possible by using the [**DICOM tags extractor**](https://bio.tools/dicom_tags_extractor) tool ([Figure 8](#fig_dataanon)). Even if no automatic re-identification risk analysis on a combination of clinical and imaging metadata is possible at this Tier, you should carefully assess that no direct or indirect identifiers are present in your clinical data. 
 
-![][image14]
 
-[Figure 8](#figur_dataanon). Recommended de-identification process workflow
+![Figure 8: Recommended de-identification process workflow.](figures/image8.png)
 
 * **Data quality check (first level \- optional)** :   
   * You may check the **accuracy** and **integrity** of your imaging dataset using the [**DICOM File integrity checker**](https://bio.tools/dicom_file_integrity_checker_by_gibi230).  
