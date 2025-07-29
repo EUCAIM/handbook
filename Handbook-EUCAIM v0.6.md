@@ -2,7 +2,13 @@
 
 **Project title:** European Federation for Cancer Images
 
-**![][image1]**
+![image](figures/image1-0.jpeg)
+
+**Disclaimer**
+
+The opinions stated in this report reflect the opinions of the authors and not the opinion of the European Commission.
+
+All intellectual property rights are owned by the consortium of EUCAIM under terms stated in their Consortium Agreement and are protected by the applicable laws. Reproduction is not authorised without prior written agreement. The commercial use of any information contained in this document may require a licence from the owner of the information.
 
 **Project acronym:** EUCAIM
 
@@ -74,190 +80,8 @@ Table of contents
 
 [**ANNEX B: Data Sharing checklist	32**](#annex-b:-data-sharing-checklist)
 
-# 1\. Introduction {#1.-introduction}
 
-## 1.1. Purpose of the handbook {#1.1.-purpose-of-the-handbook}
 
-This handbook is designed to guide **Data Holders** through the onboarding process for sharing or transferring data to the EUCAIM infrastructure. It outlines the roles, responsibilities, legal and technical requirements, and procedural steps to ensure compliance and facilitate smooth integration into the EUCAIM Federation.
-
-The **primary objectives** of this Handbook are to:
-
-* Help institutions understand the requirements for contributing data to EUCAIM.
-
-* Explain the onboarding steps, documentation, tools, and other resources available.
-
-* Ensure alignment with EUCAIM’s Data Federation Framework (DFF) and FAIR (Findable, Accessible, Interoperable, Reusable) principles.
-
-* Align with the methodological and data standards (such as Health DCAT-AP) in the context of the European Health Data Space (EHDS).
-
-* Support legal, ethical, and technical compliance during data contribution.
-
-It is intended for use by the technical teams of a data holder and anybody involved in the preparation, validation, or transfer of health data and imaging resources to EUCAIM.
-
-## 1.2. Overview of EUCAIM Data Federation, Data Holder’s Onboarding Workflow {#1.2.-overview-of-eucaim-data-federation,-data-holder’s-onboarding-workflow}
-
-The EUCAIM Data Federation is a decentralized infrastructure enabling the secure and privacy-preserving sharing of cancer imaging and clinical datasets across Europe. It includes both Reference Nodes and Federated Nodes, allowing Data Holders to either transfer anonymized datasets to EUCAIM’s secure reference nodes or maintain data locally while supporting federated queries and processing.
-
-**Before you start, pre-onboarding workflow:**
-
-1. If you are not an EUCAIM’s partner, and you are joining as a Data Holder, please make sure you complete the **Expression of Interest** so we can have your organisation registered: [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/expression-of-interest)
-
-2. **Register into the EUCAIM’s Dashboard** with a Life Science AAI (LS-AAI) account. Please follow these guidelines: [AAI in EUCAIM](https://docs.google.com/document/d/12fJwhPLqk1x6NIm9glGLd-kSCjA80maLIicT8AdLBBE/edit?tab=t.0)
-
-3. If you are not in the **mailing list of Data Holders** or do you want to make any subscription changes please send a helpdesk ticket in the “First line support” category. If you do not have an account yet, you can use the helpdesk link [https://dashboard.eucaim.cancerimage.eu/helpdesk](https://dashboard.eucaim.cancerimage.eu/helpdesk). 
-
-4. Kindly ensure that you **read the entire Handbook carefully**. This will also help you identify the appropriate channels for any questions, depending on the subject matter.
-
-5. Please find also here a **glossary** with the most commonly used terms in the field of Health Data Research: [EUCAIM Glossary](https://eucaim.gitbook.io/glossary/)
-
-**The summarized onboarding workflow for Data Holders includes**:
-
-1. **Initial assessment:** retrieving all the Data Holders’ information[^1] through the:
-
-* Tier’s Maturity Level Questionnaire (must be completed by all Data Holders): [TIER Maturity Level Questionnaire](https://dashboard.eucaim.cancerimage.eu/data-warehouse-maturity-questionnaire) This will allow us to  assess the readiness and compliance of datasets provided by data holders categorizing them into three Tiers[^2]:
-
-  * Tier 1: The datasets hosted by the federated node are registered in the central catalogue. Users can explore the metadata of the datasets registered in EUCAIM’s platform.
-
-  * Tier 2: The data of the federated node is searchable through its local searching service, which is queried by the federated search system. The users can explore the actual number of studies fulfilling the search criteria defined by the user.
-
-  * Tier 3: The federated node has a materialisation component that makes the data available to the federated processing, according to EUCAIM’s model. The user will be able to run processing actions on the actual data, if the access to them is granted.
-
-* Data Warehouse Maturity Questionnaire (must be completed just by the hospitals): [Data Warehouse Maturity Questionnaire](https://dashboard.eucaim.cancerimage.eu/data-warehouse-maturity-questionnaire) This will allow us to determine its preparedness and maturity to be part of a federated European data infrastructure for research by categorizing the centers into three CLUSTERS (1, 2 and 3).
-
-2. **Selection of integration method:** data transfer to a Reference Node or local Federated Node setup.
-
-3. **Legal/Ethical/Technical compliance documentation:**
-
-* GDPR-compliant documentation to be reviewed and approved by the institutional ethics committee.
-
-* DTA/DSA signature \+ other documentation, please go to section 3.2 Legal Documents of this Handbook.
-
-* Technical requirements: [Technical\_requirements\_Data\_Holders](https://docs.google.com/document/d/1zUSgEmQOAXl-nO3mGP1vIMwuf92DY9qkhZSvGMeJiWU/edit?tab=t.0)
-
-4. **Imaging and data preparation** according to the EUCAIM Common Data Model and Hyperontology: [https://eucaim.gitbook.io/eucaim-common-data-model/](https://eucaim.gitbook.io/eucaim-common-data-model/) 
-
-5. Data transfer to the reference node vs data sharing by setting up a federated node.
-
-6. Participation in **monitoring, validation and quality assurance** activities.
-
-Each step is supported by tools, documentation, and expert teams from EUCAIM, ensuring Data Holders receive technical, legal, and procedural guidance throughout the process.
-
-1.3. Roles and responsibilities of Data Holders
-
-Data Holders in EUCAIM are organizations that contribute with medical imaging, clinical and annotation datasets to the federated infrastructure. 
-
-Their responsibilities include:
-
-* Ensuring compliance with legal, ethical and technical requirements.
-
-* Providing datasets in acceptable formats.
-
-* Conducting proper anonymization and privacy risk assessments.
-
-* Maintaining documentation and evidence of data provenance, ethical approval and GDPR compliance.
-
-* Collaborating with EUCAIM technical teams during onboarding and integration.
-
-* Participating in ongoing monitoring, updates, and audits of the shared data.
-
-# 2\. Governance {#2.-governance}
-
-## 2.1. Data governance {#2.1.-data-governance}
-
-Data provision in EUCAIM follows a structured process led by its operational boards, each playing a key role in ensuring that incoming datasets meet the platform’s scientific, technical and legal standards.
-
-When a Data Holder submits an application to join the federation using the **Expression of Interest**, the **Access Committee** initiates the review process. It coordinates with the **Technical Board** (TB) which evaluates whether the proposed infrastructure, anonymisation protocols, risk analysis and data quality controls are in line with EUCAIM’s technical requirements. At the same time, the **Ethical and Legal Board** assesses the legal documentation submitted as evidence for the technical aspects reviewed by TB, verifying its compliance with data protection and ethical norms. 
-
-Once all evaluations are completed, the Access Committee prepares a consolidated report which is sent to the **Management Board** and **Steering Committee** to make the final decision. Throughout the process, Data Holders are expected to collaborate closely with the involved boards, provide documentation, and requests for clarification. [Figure 1](#fig_dataprov) shows a graphical representation of this process.
-
-[Figure 1](#figur_dataprov)*: Data provision workflow.*
-
-Once the data is registered and available through the EUCAIM Platform, the access for the Data Users will be submitted through the negotiator component and will be subject to the evaluation of the Access Committee. The AC evaluates the applications and informs the Management board and the DH, when needed. Federated DHs will be involved in the negotiation process  for the agreement on the data access conditions. [Figure 2](#fig_dureq) shows a graphical schema of the process. 
-
-![][image2][Figure 2](#figur_dureq)*: Data access request workflow.*
-
-The Data Holders must provide a contact point, in case of a federated node, and should endorse the EUCAIM AC to request the signature of the access conditions in the case of transferring the data to a reference node. This is explained in more detail in the next section.
-
-# 3\. Onboarding Process {#3.-onboarding-process}
-
-EUCAIM defines a federated infrastructure in which nodes provide with data and services[^3].
-
-## 3.1. Initial requirements and commitments {#3.1.-initial-requirements-and-commitments}
-
-EUCAIM defines two ways of participating as data holders, each with unique capabilities and contributions in both research and clinical environments[^4]:
-
-* **Data holders transferring data to a Reference Repository**. If you have completed research projects and aim to maintain your datasets for long-term research availability but need support, EUCAIM offers a solution. By contributing to one of our Reference Nodes, you will ensure that data remains accessible to other researchers. The process involves signing a Data Transfer Agreement (DTA) and sharing information about your project, metadata catalogue, and software. We will guide you through data de-identification, making your contribution hassle-free.
-
-* **Federated Data Holders**: If you manage active repositories and want to maintain your datasets within a federated node, EUCAIM provides the platform. As a Federated Data Holder, you'll collaborate with us through a Data Sharing Agreement (DSA). Share details about your research project, metadata catalogue, and software, along with information about your local computational and storage capabilities.
-
-## 3.2. Legal documents. {#3.2.-legal-documents.}
-
-A set of legal agreements must be prepared and signed to clearly state the obligations and responsibilities of the parties involved. The process is simpler in the case of Data Transfer Data Holders, as documents related to security and Service Level Agreements are provided by the reference nodes where the data will be deposited. Federated nodes have to provide a guarantee that they can fulfill the security and performance requirements[^5]. [Figure 3](#fig_legaldiagram) graphically shows the information and steps required for the legal framework of EUCAIM. 
-
-[Figure 3](#figur_legaldiagram): Information and steps required to complete the legal framework of EUCAIM.
-
-It is essential that the data holder provides a contact person of its legal team to be in close communication with the legal team of EUCAIM. A contact point will be assigned during the onboarding process.
-
-The first step will be to Complete the ethical training via the Moodle platform ([https://training.eucaim.cancerimage.eu/](https://training.eucaim.cancerimage.eu/))[^6]. Then, the ethical and legal requirements for data holders are different depending on the collaboration model chosen:
-
-* **Data holders who agree to transfer data to a reference node**:
-
-1. Proof of legal representation and legal basis in the case of data transfer involving multiple data holders (such as consortium or formal cooperation agreements).
-
-2. The signature of the DTA with its annexes.
-
-3. A copy of a favorable ethical approval (if applicable).
-
-4. A report from the Data Protection Officer (DPO) confirming legal compliance (i.e., justification for data sharing).
-
-5. Any documents required under your national legislation (e.g., authorization from a data protection authority, health authority, or any other relevant body)[^7]. 
-
-6. State other restrictions that should be requested to data users. For example, there could be:  
-   1. Prohibitions on commercial use of the data.  
-   2. Restrictions due to intellectual property rights.  
-   3. Restrictions on use depending on the conditions of the expression of consent by the data subject.
-
-* **Data holders who want to set up their own federated node**:
-
-1. Proof of legal representation and legal basis in the case of data sharing involving multiple data holders (e.g., consortium agreements, formal cooperation agreements, etc.).
-
-2. The signature of the DSA with its annexes.
-
-3. A copy of a favorable ethical approval (if applicable).
-
-4. A report from the Data Protection Officer (DPO) confirming legal compliance (i.e., justification for data sharing).
-
-5. Data Protection Impact Assessment (DPIA) and documents demonstrating the security of the information system. To demonstrate security tasks, some reference to international or national security standards like ISO 27001 will save time. Or results or a periodic external audit.
-
-6. Any documents required under your national legislation (e.g., authorization from a data protection authority, health authority, or any other relevant body). 
-
-7. Other restrictions. For example, there could be:
-
-   1. Prohibitions on commercial use of the data.  
-   2. Restrictions due to intellectual property rights.  
-   3. Restrictions on use depending on the conditions of the expression of consent by the data subject.
-
-In both cases it is compulsory that the DPO and/or the legal representative of the Data Holder confirm that they are aware about the transfer or sharing the data within EUCAIM and the security measures that must be taken. 
-
-[Table 1](#tab_DTA-1) summarises the actions for the Data Holders opting for the Data Transfer model and [Table 2](#tab_DSA-1) for the Data Holders who will set up a federated node.
-
-| Data Transfer |  |  |
-| :---- | :---- | :---- |
-| **Action** | **Description** | **Documents** |
-| Provide documentation | Proof of legal representation and legal basis if necessary.  A copy of a favorable ethical approval (if applicable). A report from the DPO confirming legal compliance. Any documents required under your national legislation Terms of Usage for the data. | D4.4 [Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy)  (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders) |
-| Data Transfer Agreement | Fill-in and sign the DTA | [Draft DTA](https://drive.google.com/file/d/1F5zMFfhZ9u53gcMhxRNUZVivjqvLspkU/view?usp=sharing) |
-
-[Table 1](#table_DTA-1): Summary of steps to be completed for Data Transfer case.
-
-| Data Sharing |  |  |
-| :---- | :---- | :---- |
-| **Action** | **Description** | **Documents** |
-| Provide documentation | Proof of legal representation and legal basis if necessary.  A report from the DPO confirming legal compliance. Data Protection Impact Assessment (DPIA)  Documents demonstrating the security of the information system. Any documents required under your national legislation. | D4.4 [Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy)  (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders) |
-| Data Sharing Agreement | Fill-in and sign the DSA | [Draft DSA](https://drive.google.com/file/d/1UMdDF52mXGHNIL0GegzfyuSBVfKCIl7d/view?usp=sharing) |
-| Define especial Access Conditions | A Document to be signed by the Data User that indicates the conditions under the Data User can access the data. | [Draft Template](https://drive.google.com/file/d/1UMdDF52mXGHNIL0GegzfyuSBVfKCIl7d/view?usp=sharing) |
-| Contact point for the negotiation (Only in federated nodes) | The LS-AAI details of the data holder delegate who will interact with the Data User through the negotiator. | [Registration of users in EUCAIM](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) LS-AAI.  |
-
-[Table 2](#table_DSA-1): Summary of steps to be completed for Data Sharing case
 
 # 4\. Support and communication  {#4.-support-and-communication}
 
