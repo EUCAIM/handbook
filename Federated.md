@@ -68,7 +68,7 @@ The Tier 2 compliance implies that the data that is hosted at the federated node
 
 The steps needed to integrate the local node are described in [figure 11](#fig_tier2fednode).
 
-![Figure 11](figures/image11.png): Actions to integrate a federated node in the tier 2 level.
+![Figure_11](figures/image11.png)Figure 11: Actions to integrate a federated node in the tier 2 level.
 
 The actions corresponding to the federated search are described in the gitbook ([https://eucaim.gitbook.io/enduserguide/6-userguide4members\#id-6.3.-contribution-through-a-federated-node](https://eucaim.gitbook.io/enduserguide/6-userguide4members#id-6.3.-contribution-through-a-federated-node)) .
 
