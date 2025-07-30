@@ -14,7 +14,7 @@ EUCAIM defines two ways of participating as data holders, each with unique capab
 
 A set of legal agreements must be prepared and signed to clearly state the obligations and responsibilities of the parties involved. The process is simpler in the case of Data Transfer Data Holders, as documents related to security and Service Level Agreements are provided by the reference nodes where the data will be deposited. Federated nodes have to provide a guarantee that they can fulfill the security and performance requirements[^5]. [Figure 3](#fig_legaldiagram) graphically shows the information and steps required for the legal framework of EUCAIM. 
 
-![Figure 3: Information and steps required to complete the legal framework of EUCAIM.](figures/image0.png)
+![Figure 3: Information and steps required to complete the legal framework of EUCAIM.](figures/image3.png) Figure 3: Information and steps required to complete the legal framework of EUCAIM.
 
 It is essential that the data holder provides a contact person of its legal team to be in close communication with the legal team of EUCAIM. A contact point will be assigned during the onboarding process.
 
@@ -78,3 +78,15 @@ In both cases it is compulsory that the DPO and/or the legal representative of t
 | Contact point for the negotiation (Only in federated nodes) | The LS-AAI details of the data holder delegate who will interact with the Data User through the negotiator. | [Registration of users in EUCAIM](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) LS-AAI.  |
 
 [Table 2](#table_DSA-1): Summary of steps to be completed for Data Sharing case
+
+
+
+[^3]:  *See [D5.6 Minimum Data Federation and Interoperability Framework](https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d_fs/view?usp=sharing)* *section 3 and [https://eucaim.gitbook.io/architecture-of-eucaim/4.-detailed-architecture](https://eucaim.gitbook.io/architecture-of-eucaim/4.-detailed-architecture)* 
+
+[^4]:  *See ​​Deliverable [D4.4 Rules for Participation](https://drive.google.com/file/d/1QCAbv5nPpykos16-hmtKxFmb1h7YxP9B/view?usp=sharing), section 4.3.1 (Data Transfer) and 4.3.2 (Data Sharing)., Sections 4–6*.
+
+[^5]:  *See D4.4 [Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy) , Sections 4.1 and 4.4, D5.6 [Minimum Data Federation and Interoperability Framework](https://drive.google.com/drive/folders/1mzMxUBdah2a-Wm4jNJHqhDmB-ZSDCT_u), Section 3 (Federation Architecture and Agreements)\]*
+
+[^6]:  *See D2.4 [Training Evaluation: Guidelines, Best Practices, Lessons Learned](https://drive.google.com/file/d/1hNCkrP8UutNiPexzAzpsdt3WDOwdVh66/view?usp=drive_link).*
+
+[^7]:  See  D4.4 [Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy), Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders).
