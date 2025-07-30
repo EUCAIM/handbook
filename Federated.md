@@ -29,7 +29,7 @@ The processing capacity should be dimensioned to the amount of data available an
 
 ### **7.1.1. Security and privacy considerations** {#7.1.1.-security-and-privacy-considerations}
 
-As stated in section 3.2, The DH who set up a local node have to demonstrate that the site implements good practices related to security and privacy preservation. Although they are not mandatory, a certification such as  ISO/IEC 27001 and/or ISO/IEC 27701 would be appropriate to prove this capability. As a reference, the UPV reference node has a security and privacy document which is shared with the Data Holders in this link: [https://drive.google.com/file/d/1QK9pBuSwyMXNUdjIrNcd5khZb\_Wpzmag/view?usp=drive\_link](https://drive.google.com/file/d/1QK9pBuSwyMXNUdjIrNcd5khZb_Wpzmag/view?usp=drive_link). 
+As stated in section 3.2, The DH who set up a local node have to demonstrate that the site implements good practices related to security and privacy preservation. Although they are not mandatory, a certification such as  ISO/IEC 27001 and/or ISO/IEC 27701 would be appropriate to prove this capability. As a reference, the UPV reference node has a security and privacy document which is shared with the Data Holders in this link: [https://drive.google.com/file/d/1QK9pBuSwyMXNUdjIrNcd5khZb_Wpzmag/view?usp=drive_link](https://drive.google.com/file/d/1QK9pBuSwyMXNUdjIrNcd5khZb_Wpzmag/view?usp=drive_link). 
 
 Ensure that the document includes the responsible persons and contacts in charge of the management of the site, the monitoring, backuping and security incidents. The site should implement periodic security audits. External security audits are also encouraged.
 
@@ -49,7 +49,7 @@ The registration of the dataset on the public catalogue has been described in se
 
 - In the coming future, we will support the federation of datasets through a pull model in which datasets’ metadata is harvested by the central catalogue. This will require deploying a local registry and populating it with the information of the DH’s datasets.
 
-[Figure 10](#figur_tier1fednode) Workflow for the tier 1 compliance in a Federated node.
+![Figure 10](figures/image10.png) Workflow for the tier 1 compliance in a Federated node.
 
 | Action | Purpose | Link |
 | :---- | :---- | :---- |
@@ -68,7 +68,7 @@ The Tier 2 compliance implies that the data that is hosted at the federated node
 
 The steps needed to integrate the local node are described in [figure 11](#fig_tier2fednode).
 
-[Figure 11](#figur_tier2fednode): Actions to integrate a federated node in the tier 2 level.
+![Figure 11](figures/image11.png): Actions to integrate a federated node in the tier 2 level.
 
 The actions corresponding to the federated search are described in the gitbook ([https://eucaim.gitbook.io/enduserguide/6-userguide4members\#id-6.3.-contribution-through-a-federated-node](https://eucaim.gitbook.io/enduserguide/6-userguide4members#id-6.3.-contribution-through-a-federated-node)) .
 
@@ -89,13 +89,16 @@ After submitting and having your registration request accepted, perform the foll
 
 **1\. Generate and Submit a CSR**
 
-Create a Certificate Signing Request (CSR) with the Common Name (CN) set to your provider’s ID (the provider ID or your\_id is an identifier for your organization chosen by you and accepted by the validator) plus the domain [broker.eucaim.cancerimage.eu](http://broker.eucaim.cancerimage.eu): 
+Create a Certificate Signing Request (CSR) with the Common Name (CN) set to your provider’s ID (the provider ID or your_id is an identifier for your organization chosen by you and accepted by the validator) plus the domain [broker.eucaim.cancerimage.eu](http://broker.eucaim.cancerimage.eu): 
 
-| openssl req \-key $REPO\_ID.priv.pem \-new \\             \-subj "/CN=$REPO\_ID.broker.eucaim.cancerimage.eu/C=X/L=Y" \\             \-out $REPO\_ID.csr |
-| :---- |
+```
+openssl req -key $REPO_ID.priv.pem -new \
+            -subj "/CN=$REPO_ID.broker.eucaim.cancerimage.eu/C=X/L=Y" \
+            -out $REPO_ID.csr
+```
 
-- $PROVIDER\_ID.priv.pem: Name of the private key file to be generated.  
-- CN: Should be {your\_id}.broker.eucaim.cancerimage.eu. The value of {your\_id} should have been provided as a reply to the registration.  
+- $PROVIDER_ID.priv.pem: Name of the private key file to be generated.  
+- CN: Should be {your_id}.broker.eucaim.cancerimage.eu. The value of {your_id} should have been provided as a reply to the registration.  
 - C=, L=: Country and locality codes as needed.
 
 Then, submit the resulting `.csr` file to the central node managers through the helpdesk, as a reply to the opened ticket.
@@ -110,16 +113,53 @@ To deploy a Beam node using the samply/beam-proxy:main Docker image alongside th
 
 Here's an example configuration:
 
-| version: '3.8' services:   beam-proxy:     image: samply/beam-proxy:main     environment:       \- BROKER\_URL=https://broker.eucaim.cancerimage.eu       \- PROXY\_ID=${PROVIDER\_ID}.broker.eucaim.cancerimage.eu       \- APP\_FOCUS\_KEY=${APP1\_KEY}   \# Randomly generated focus key       \- PRIVKEY\_FILE=/run/secrets/proxy.pem     \# Your proxy private key       \- BIND\_ADDR=0.0.0.0:8081        \# Listening address       \- http\_proxy=${HTTP\_PROXY}      \# If needed       \- https\_proxy=${HTTPS\_PROXY}    \# If needed     secrets:       \- proxy.pem                     \# Proxy private key       \- root.crt.pem                  \# Root CA certificate     networks:       \- beam-network   focus:     image: samply/focus:latest     environment:       \- BEAM\_PROXY\_URL=http://beam-proxy:8081      \# Address where the BEAM Proxy is reachable within the Docker network       \- ENDPOINT\_URL=http://mediator-service:8089/ \# Address of your local Mediator endpoint       \- API\_KEY=${APP1\_KEY}[^8]                        \# Same key as APP\_FOCUS\_KEY       \- BEAM\_APP\_ID\_LONG=focus.${PROVIDER\_ID}.broker.eucaim.cancerimage.eu     depends\_on:       \- beam-proxy       \- mediator-service     networks:       \- beam-network secrets:   proxy.pem:     file: ./secrets/proxy.pem   root.crt.pem:     file: ./secrets/root.crt.pem networks:   beam-network:     driver: bridge  |
-| :---- |
+```
+version: '3.8'
 
+services:
+  beam-proxy:
+    image: samply/beam-proxy:main
+    environment:
+      - BROKER_URL=https://broker.eucaim.cancerimage.eu
+      - PROXY_ID=${PROVIDER_ID}.broker.eucaim.cancerimage.eu
+      - APP_FOCUS_KEY=${APP1_KEY}   \# Randomly generated focus key
+      - PRIVKEY_FILE=/run/secrets/proxy.pem     \# Your proxy private key
+      - BIND_ADDR=0.0.0.0:8081        \# Listening address
+      - http_proxy=${HTTP_PROXY}      \# If needed
+      - https_proxy=${HTTPS_PROXY}    \# If needed
+    secrets:
+      - proxy.pem                     \# Proxy private key       
+      - root.crt.pem                  \# Root CA certificate
+    networks:
+      - beam-network
+  focus:
+    image: samply/focus:latest
+    environment:
+      - BEAM_PROXY_URL=http://beam-proxy:8081      \# Address where the BEAM Proxy is reachable within the Docker network       
+      - ENDPOINT_URL=http://mediator-service:8089/ \# Address of your local Mediator endpoint
+      - API_KEY=${APP1_KEY}[^8]                        \# Same key as APP_FOCUS_KEY
+      - BEAM_APP_ID_LONG=focus.${PROVIDER_ID}.broker.eucaim.cancerimage.eu
+    depends_on:
+      - beam-proxy
+      - mediator-service
+    networks:
+      - beam-network
+secrets:
+  proxy.pem:
+    file: ./secrets/proxy.pem
+  root.crt.pem:
+    file: ./secrets/root.crt.pem
+networks:
+  beam-network:
+    driver: bridge
+```
 The variables required are: 
-
-- BEAM\_PROXY\_URL  
-- ENDPOINT\_URL  
-- API\_KEY  
-- BEAM\_APP\_ID\_LONG
-
+```
+- BEAM_PROXY_URL  
+- ENDPOINT_URL  
+- API_KEY  
+- BEAM_APP_ID_LONG
+```
 For additional optional configuration, see the Focus README:  
 [https://github.com/samply/focus?tab=readme-ov-file\#optional-variables](https://github.com/samply/focus?tab=readme-ov-file#optional-variables) 
 
