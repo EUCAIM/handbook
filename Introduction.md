@@ -83,3 +83,7 @@ Their responsibilities include:
 * Collaborating with EUCAIM technical teams during onboarding and integration.
 
 * Participating in ongoing monitoring, updates, and audits of the shared data.
+
+[^1]:  *Both folders can be found here: [Questionnaires](https://drive.google.com/drive/folders/1lflM8H_THJveNar3vS6_wAB9vfqEihhE)* *please, make sure to upload the completed questionnaires in the corresponding folder with your institution name first.*
+
+[^2]:  *See ​​Deliverable [D4.4 Rules for Participation](https://drive.google.com/file/d/1QCAbv5nPpykos16-hmtKxFmb1h7YxP9B/view?usp=sharing), Sections 2, 4.1, and summarized in Table 2, [D5.6 Minimum Data Federation and Interoperability Framework](https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d_fs/view?usp=sharing), Sections 4–6.*
