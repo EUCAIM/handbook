@@ -2,7 +2,7 @@
 
 **Project title:** European Federation for Cancer Images
 
-![image](figures/image1.png)
+![image](figures/image0.png)
 
 **Disclaimer**
 
