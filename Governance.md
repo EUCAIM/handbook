@@ -8,12 +8,12 @@ When a Data Holder submits an application to join the federation using the **Exp
 
 Once all evaluations are completed, the Access Committee prepares a consolidated report which is sent to the **Management Board** and **Steering Committee** to make the final decision. Throughout the process, Data Holders are expected to collaborate closely with the involved boards, provide documentation, and requests for clarification. [Figure 1](#fig_dataprov) shows a graphical representation of this process.
 
-![Figure 1*: Data provision workflow.*](figures/image2.png)
+![Figure 1*: Data provision workflow.*](figures/image2.png) Figure 1: Data provision workflow.
 
 
 
 Once the data is registered and available through the EUCAIM Platform, the access for the Data Users will be submitted through the negotiator component and will be subject to the evaluation of the Access Committee. The AC evaluates the applications and informs the Management board and the DH, when needed. Federated DHs will be involved in the negotiation process  for the agreement on the data access conditions. [Figure 2](#fig_dureq) shows a graphical schema of the process. 
 
-![Figure 2:* Data access request workflow.*](figures/image3.png)
+![Figure 2:* Data access request workflow.*](figures/image3.png) Figure 2: Data access request workflow.
 
 The Data Holders must provide a contact point, in case of a federated node, and should endorse the EUCAIM AC to request the signature of the access conditions in the case of transferring the data to a reference node. This is explained in more detail in the next section.
