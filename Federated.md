@@ -122,22 +122,22 @@ services:
     environment:
       - BROKER_URL=https://broker.eucaim.cancerimage.eu
       - PROXY_ID=${PROVIDER_ID}.broker.eucaim.cancerimage.eu
-      - APP_FOCUS_KEY=${APP1_KEY}   \# Randomly generated focus key
-      - PRIVKEY_FILE=/run/secrets/proxy.pem     \# Your proxy private key
-      - BIND_ADDR=0.0.0.0:8081        \# Listening address
-      - http_proxy=${HTTP_PROXY}      \# If needed
-      - https_proxy=${HTTPS_PROXY}    \# If needed
+      - APP_FOCUS_KEY=${APP1_KEY}               # Randomly generated focus key
+      - PRIVKEY_FILE=/run/secrets/proxy.pem     # Your proxy private key
+      - BIND_ADDR=0.0.0.0:8081                  # Listening address
+      - http_proxy=${HTTP_PROXY}                # If needed
+      - https_proxy=${HTTPS_PROXY}              # If needed
     secrets:
-      - proxy.pem                     \# Proxy private key       
-      - root.crt.pem                  \# Root CA certificate
+      - proxy.pem                               # Proxy private key       
+      - root.crt.pem                            # Root CA certificate
     networks:
       - beam-network
   focus:
     image: samply/focus:latest
     environment:
-      - BEAM_PROXY_URL=http://beam-proxy:8081      \# Address where the BEAM Proxy is reachable within the Docker network       
-      - ENDPOINT_URL=http://mediator-service:8089/ \# Address of your local Mediator endpoint
-      - API_KEY=${APP1_KEY}[^8]                        \# Same key as APP_FOCUS_KEY
+      - BEAM_PROXY_URL=http://beam-proxy:8081      # Address where the BEAM Proxy is reachable within the Docker network       
+      - ENDPOINT_URL=http://mediator-service:8089/ # Address of your local Mediator endpoint
+      - API_KEY=${APP1_KEY}                        # Same key as APP_FOCUS_KEY
       - BEAM_APP_ID_LONG=focus.${PROVIDER_ID}.broker.eucaim.cancerimage.eu
     depends_on:
       - beam-proxy
@@ -162,6 +162,7 @@ The variables required are:
 ```
 For additional optional configuration, see the Focus README:  
 [https://github.com/samply/focus?tab=readme-ov-file\#optional-variables](https://github.com/samply/focus?tab=readme-ov-file#optional-variables) 
+You can generate a random key for the `API_KEY`, for example, by running: `$ head -c 21 /dev/urandom`
 
 **4\. Final Checks and Deployment**
 
