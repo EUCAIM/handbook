@@ -24,61 +24,59 @@ This version has the comments and changes accepted. A backuped version (0.5) wit
 
 Table of contents
 
-[**1\. Introduction	3**](#1.-introduction)
+[**1\. Introduction**](Introduction.md)
+[1.1. Purpose of the handbook	3](Introduction.md#purpose-of-the-handbook)
+[1.2. Overview of EUCAIM Data Federation, Data Holder’s Onboarding Workflow	3](Introduction.md#overview-of-eucaim-data-federation,-data-holder’s-onboarding-workflow)
 
-[1.1. Purpose of the handbook	3](#1.1.-purpose-of-the-handbook)
+[**2\. Governance	**](Governance.md)
 
-[1.2. Overview of EUCAIM Data Federation, Data Holder’s Onboarding Workflow	3](#1.2.-overview-of-eucaim-data-federation,-data-holder’s-onboarding-workflow)
+[2.1. Data governance](Governance.md#data-governance)
 
-[**2\. Governance	5**](#2.-governance)
+[**3\. Onboarding Process**](Onboarding.md)
 
-[2.1. Data governance	5](#2.1.-data-governance)
+[3.1. Initial requirements and commitments	6](Onboarding.md#initial-requirements-and-commitments)
 
-[**3\. Onboarding Process	6**](#3.-onboarding-process)
+[3.2. Legal documents.	7](Onboarding.md#legal-documents.)
 
-[3.1. Initial requirements and commitments	6](#3.1.-initial-requirements-and-commitments)
+[**4\. Support and communication**](Support.md)
 
-[3.2. Legal documents.	7](#3.2.-legal-documents.)
+[4.1. Helpdesk and training resources](Support.md#helpdesk-and-training-resources)
 
-[**4\. Support and communication	9**](#4.-support-and-communication)
+[4.1.1. EUCAIM training platform: Overview of courses and access](Support.md#eucaim-training-platform:-overview-of-courses-and-access)
 
-[4.1. Helpdesk and training resources	9](#4.1.-helpdesk-and-training-resources)
+[**5\. Data Preparation process**](DataPreparation.md)
 
-[4.1.1. EUCAIM training platform: Overview of courses and access	11](#4.1.1.-eucaim-training-platform:-overview-of-courses-and-access)
+[5.1. Tier 1 datasets](DataPreparation.md#tier-1-datasets)
 
-[**5\. Data Preparation process	12**](#5.-data-preparation-process)
+[5.2. Tier 2 and 3 datasets](DataPreparation.md#tier-2-and-3-datasets)
 
-[5.1. Tier 1 datasets	14](#5.1.-tier-1-datasets)
+[**6\. Option 1: Transfer to Reference Node**](Transfer.md)
 
-[5.2. Tier 2 and 3 datasets	16](#5.2.-tier-2-and-3-datasets)
+[6.1. Reference Nodes](Transfer.md#reference-nodes)
 
-[**6\. Option 1: Transfer to Reference Node	18**](#6.-option-1:-transfer-to-reference-node)
+[6.2. Transferring data to the nodes](Transfer.md#transferring-data-to-the-nodes)
 
-[6.1. Reference Nodes	18](#6.1.-reference-nodes)
+[**7\. Option 2: Setting up a Federated Node**](Federated.md)
 
-[6.2. Transferring data to the nodes	19](#6.2.-transferring-data-to-the-nodes)
+[7.1. Setting up the node](Federated.md#setting-up-the-node)
 
-[**7\. Option 2: Setting up a Federated Node	21**](#7.-option-2:-setting-up-a-federated-node)
+[7.1.1. Security and privacy considerations](Federated.md#security-and-privacy-considerations)
 
-[7.1. Setting up the node	21](#7.1.-setting-up-the-node)
+[7.1.2. Service Level Agreement](Federated.md#service-level-agreement)
 
-[7.1.1. Security and privacy considerations	22](#7.1.1.-security-and-privacy-considerations)
+[7.2. Tier 1 compliance](Federated.md#tier-1-compliance)
 
-[7.1.2. Service Level Agreement	22](#7.1.2.-service-level-agreement)
+[7.3. Tier 2 compliance](Federated.md#tier-2-compliance)
 
-[7.2. Tier 1 compliance	22](#7.2.-tier-1-compliance)
+[7.3.1. Node Registration and Deployment](#7.3.1.-node-registration-and-deployment)
 
-[7.3. Tier 2 compliance	23](#7.3.-tier-2-compliance)
+[7.4. Tier 3 compliance](#7.4.-tier-3-compliance)
 
-[7.3.1. Node Registration and Deployment	25](#7.3.1.-node-registration-and-deployment)
+[**10\. References**](References.md)
 
-[7.4. Tier 3 compliance	27](#7.4.-tier-3-compliance)
+[**ANNEX A: Data transfer checklist**](DataTransferAnnex.md)
 
-[**10\. References	28**](#10.-references)
-
-[**ANNEX A: Data transfer checklist	29**](#annex-a:-data-transfer-checklist)
-
-[**ANNEX B: Data Sharing checklist	32**](#annex-b:-data-sharing-checklist)
+[**ANNEX B: Data Sharing checklist**](DataSharingAnnex.md)
 
 
 [^1]:  *Both folders can be found here: [Questionnaires](https://drive.google.com/drive/folders/1lflM8H_THJveNar3vS6_wAB9vfqEihhE)* *please, make sure to upload the completed questionnaires in the corresponding folder with your institution name first.*
