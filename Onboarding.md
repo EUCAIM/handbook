@@ -4,11 +4,34 @@ EUCAIM defines a federated infrastructure in which nodes provide with data and s
 
 ## 3.1. Initial requirements and commitments {#3.1.-initial-requirements-and-commitments}
 
-EUCAIM defines two ways of participating as data holders, each with unique capabilities and contributions in both research and clinical environments[^4]:
+**Before you start, pre-onboarding workflow**:
 
-* **Data holders transferring data to a Reference Repository**. If you have completed research projects and aim to maintain your datasets for long-term research availability but need support, EUCAIM offers a solution. By contributing to one of our Reference Nodes, you will ensure that data remains accessible to other researchers. The process involves signing a Data Transfer Agreement (DTA) and sharing information about your project, metadata catalogue, and software. We will guide you through data de-identification, making your contribution hassle-free.
+1. If you are not an EUCAIM’s partner, and you are joining as a Stakeholder-Data Holder, please make sure you complete the **Expression of Interest** so we can have your organisation registered as Stakeholder: [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/expression-of-interest)
+2. **Register into the EUCAIM’s Dashboard** with a Life Science AAI (LS-AAI) account. Please follow these guidelines: [AAI in EUCAIM](https://docs.google.com/document/d/12fJwhPLqk1x6NIm9glGLd-kSCjA80maLIicT8AdLBBE/edit?tab=t.0)
+3. If you are not on the **mailing list of Data Holders**, or if you want to make any subscription changes, please send a helpdesk ticket under the “First line support” category. If you do not have an account yet, you can use the helpdesk link [https://dashboard.eucaim.cancerimage.eu/helpdesk](https://dashboard.eucaim.cancerimage.eu/helpdesk). 
+4. Kindly ensure that you **read the entire Handbook carefully**. This will also help you identify the appropriate channels for any questions, depending on the subject matter.
+5. Please find also here a **glossary** with the most commonly used terms in the field of Health Data Research: [EUCAIM Glossary](https://eucaim.gitbook.io/glossary/)
 
-* **Federated Data Holders**: If you manage active repositories and want to maintain your datasets within a federated node, EUCAIM provides the platform. As a Federated Data Holder, you'll collaborate with us through a Data Sharing Agreement (DSA). Share details about your research project, metadata catalogue, and software, along with information about your local computational and storage capabilities.
+**The summarized onboarding workflow for Data Holders includes:**
+1. **Initial assessment**: retrieving all the Data Holders’ information through the:
+  - __Application form__: [Call for use cases from EUCAIM partners](https://eu.jotform.com/233524103677050). Complete the application form for data incorporation use cases for the Access Committee. This will allow us to evaluate the scientific relevance of your participation in EUCAIM as a Data Holder.
+  - __Tier’s Maturity Level Questionnaire__ (must be completed by all Data Holders): [TIER Maturity Level Questionnaire](https://dashboard.eucaim.cancerimage.eu/data-warehouse-maturity-questionnaire) This will allow us to assess the readiness and compliance of your provided datasets, categorizing them into three Tiers:
+    - Tier 1: The datasets hosted by the federated node are registered in the central catalogue. Users can explore the metadata of the datasets registered in EUCAIM’s platform.
+    - Tier 2: The data of the federated node is searchable through its local searching service, which is queried by the federated search system. The users can explore the actual number of studies fulfilling the search criteria defined by the user.
+    - Tier 3: The federated node has a materialisation component that makes the data available to the federated processing, according to EUCAIM’s model. The user will be able to run processing actions on the actual data, if the access to them is granted.
+ - __Data Warehouse Maturity Questionnaire:__ (must be completed just by the Real World Data Holders): [Data Warehouse Maturity Questionnaire](https://dashboard.eucaim.cancerimage.eu/data-warehouse-maturity-questionnaire) This will allow us to determine its preparedness and maturity to be part of a federated European data infrastructure for research by categorizing the centers into three CLUSTERS (1, 2 and 3).
+2. **Selection of integration method**: data transfer to a Reference Node or local Federated Node setup. EUCAIM defines two ways of participating as data holders, each with unique capabilities and contributions in both research and clinical environments[^3] and defines a federated infrastructure in which nodes provide with data and services[^4]:
+- **Data holders transferring data to a Reference Repository**. If you have completed research projects and aim to maintain your datasets for long-term research availability but need support, EUCAIM offers a solution. By contributing to one of our Reference Nodes, you will ensure that data remains accessible to other researchers. The process involves signing a Data Transfer Agreement (DTA) and sharing information about your project, metadata catalogue, and software. We will guide you through data de-identification, making your contribution hassle-free.
+- **Federated Data Holders**: If you manage active repositories and want to maintain your datasets within a federated node, EUCAIM provides the platform. As a Federated Data Holder, you'll collaborate with us through a Data Sharing Agreement (DSA), and provide details about your research project, metadata catalogue, and software, along with information about your local computational and storage capabilities.
+3. **Legal/Ethical/Technical compliance documentation:**
+- GDPR-compliant documentation to be reviewed and approved by the institutional ethics committee.
+- DTA/DSA signature + other documentation, please go to section 3.2 Legal Documents of this Handbook.
+- Technical requirements: [Technical_requirements_Data_Holders](https://docs.google.com/document/d/1u0IPiPNcPivfECYzVvU6zXzh77jNrLojPeHIdLPjEhc/edit?usp=sharing)
+4. Imaging and data preparation according to the EUCAIM Common Data Model and Hyperontology: https://eucaim.gitbook.io/eucaim-common-data-model/ 
+Data transfer to the reference node vs data sharing by setting up a federated node.
+5. Participation in monitoring, validation and quality assurance activities. Each step is supported by __tools, documentation, and expert teams__ from EUCAIM, ensuring Data Holders receive technical, legal, and procedural guidance throughout the process.
+
+
 
 ## 3.2. Legal documents. {#3.2.-legal-documents.}
 
