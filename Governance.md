@@ -10,12 +10,12 @@ Once all evaluations are completed, the Access Committee prepares a consolidated
 
 <img src="figures/image1.png" alt="Data provision workflow" width="600" height="400">
 
-Figure 1: Data provision workflow.
+<a id="fig_dataprov"></a>Figure 1: Data provision workflow.
 
 Once the data is registered and available through the EUCAIM Platform, the access for the Data Users will be submitted through the negotiator component and will be subject to the evaluation of the Access Committee. The AC evaluates the applications and informs the Management board and the DH, when needed. Federated DHs will be involved in the negotiation process  for the agreement on the data access conditions. [Figure 2](#fig_dureq) shows a graphical schema of the process. 
 
 <img src="figures/image2.png" alt="Data access request workflow." width="900" height="300">
 
-Figure 2: Data access request workflow.
+<a id="fig_dureq"></a>Figure 2: Data access request workflow.
 
 The Data Holders must provide a contact point, in case of a federated node, and should endorse the EUCAIM AC to request the signature of the access conditions in the case of transferring the data to a reference node. This is explained in more detail in the next section.
