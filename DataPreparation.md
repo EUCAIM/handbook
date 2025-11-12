@@ -2,7 +2,7 @@
 
 The data compliance to the different tier levels can be performed progressively. The process starts with the extraction, annotation and de-identification of data and it is followed by three steps of standardisation, anonymisation check and quality check. [Figure 6](#fig_dataprep1) shows schematically those steps. 
 
-![Figure 6*: Steps for data preparation. Steps in bold are mandatory.*](figures/image6.png)
+![fig_dataprep1](figures/image6.png)Figure 6: Steps for data preparation. Steps in bold are mandatory
 
 The details of the steps will be provided in the following sections, but the outline is the following:
 
@@ -12,21 +12,24 @@ The details of the steps will be provided in the following sections, but the out
 
 For this purpose, several tools have been selected and developed in EUCAIM. [Figure 7](#fig_datatools) shows the main tools selected for this phase. Details on the downloading and usage of the tools are given in the following sections. 
 
-![https://bio.tools/mitk](figures/image7-mitk.png)
-![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-dcmseg.png)
-![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-nifti.png)
-![https://bio.tools/dicom_file_integrity_checker_by_gibi230](figures/image7-tags.png)
-![https://bio.tools/eucaim_dicom_anonymizer](figures/image7-anon.png)]
-![https://bio.tools/trace4medicalimagecleaning](figures/image7-trace4med.png)  
-![https://bio.tools/dicom_tags_extractor](figures/image7-dcmtag.png)
-![](figures/image7-wiz.png)
-![https://bio.tools/eetl_toolset](figures/image7-etl.png)
+
+|    |    |
+|---|---|
+| ![https://bio.tools/mitk](figures/image7-mitk.png)                       | ![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-.png) |
+| ![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-nifti.png) | ![https://bio.tools/dicom_file_integrity_checker_by_gibi230](figures/image7-tags.png) |
+| ![https://bio.tools/eucaim_dicom_anonymizer](figures/image7-anon.png)]   | ![https://bio.tools/trace4medicalimagecleaning](figures/image7-trace4med.png) |
+| ![https://bio.tools/dicom_tags_extractor](figures/image7-tags.png)       | ![](figures/image7-wiz.png) | 
+| ![https://bio.tools/eetl_toolset](figures/image7-etl.png) | |
 
 [Figure 7](#figur_datatools): Data preparation tools. Click on the thumbnail for more information on the tool.
 
-## 5.1. Tier 1 datasets {#5.1.-tier-1-datasets}
+## 5.1. Downloading data preparation tools {#5.1.-downloading-data-preparation-tools}
+Data holders can get information on the data preparation tools (listed in the following subsections) in the bio tools catalogue ([https://bio.tools/t?domain=eucaim](https://bio.tools/t?domain=eucaim)). The binaries of the tools can be downloaded from the EUCAIM Software artifacts registry ([https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories)). The access to the registry requires a valid account and additional permissions that can be requested on the first access to the registry. It is advisable that the data holder opens a ticket in the helpdesk in the enrollment group to speed-up the process of approval (only data holders and project members can download the tools). Instructions on the downloading and usage of each tool are given in the links provided in the description of the tools in the bio tools catalogue.
+For clarity, please find below a step-by-step guide on how to access the Harbor repository and download the required tools: [Accessing the Harbor and Downloading Tools](https://docs.google.com/document/d/1uLtiKaAu0zRDSDXFneReV5z51toiI_BO/edit#heading=h.3bnalyq7ei4m).
 
-5.1.1. Requirements for your Tier 1 dataset
+## 5.2. Tier 1 datasets {#5.2.-tier-1-datasets}
+
+5.2.1. Requirements for your Tier 1 dataset
 
 Tier 1 Data Holders must ensure that their data satisfy the following minimum requirements:
 
@@ -38,18 +41,21 @@ Tier 1 Data Holders must ensure that their data satisfy the following minimum re
 
 The minimum metadata requirements for the imaging and clinical data are presented in this [document](https://docs.google.com/document/d/1uWE0faqNExufI-hb4b8rxDlD0lkVtLe0/edit).
 
-5.1.2. Steps to prepare your Tier 1 dataset
+5.2.2. Steps to prepare your Tier 1 dataset
 
 The preparation of your dataset will follow the steps indicated in [Figure 6](#fig_dataprep1): 
 
 * **Annotation (optional)**: you may want to annotate your imaging data, either by using your own tool. However, we recommend  using [**MITK (Medical Imaging Interaction Toolkit) Workbench**](https://bio.tools/mitk) to avoid the burden (and the risk) of additional conversion procedures.   
 * **Format standardization (optional)**: it is recommended that  your imaging raw data are in DICOM format, and if applicable, that your annotations are in DICOM-SEG. If you need to convert annotation files to DICOM-SEG, you may use the EUCAIM [**DicomSeg converter**](https://hub.docker.com/r/mariov687/dicomseg) tool.   
-* **De-identification** **(mandatory)**: you must ensure that no identifiable information (direct or indirect) is present in the dataset you will share. If your imaging data are not already de-identified, you may use the [**EUCAIM Anonymizer**](https://bio.tools/eucaim_dicom_anonymizer%20) ([Figure 8](#fig_dataanon)). In this case, you must ensure that the patient ID linking clinical and imaging data is identical and listed as the first variable in the clinical dataset for tabular data.  
+* **De-identification** **(mandatory)**: you must ensure that no identifiable information (direct or indirect) is present in the dataset you will share. If your imaging data are not already de-identified, you may use the [**Lethe EUCAIM Anonymizer**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/) ([Figure 8](#fig_dataanon)). In this case, you must ensure that the patient ID linking clinical and imaging data is identical and listed as the first variable in the clinical dataset for tabular data. Moreover, the tool requires as input the SITE_ID, the unique identifier of the data provider, which is you can see in your user profile from the [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/). In case your Life Science account is not assigned to a known organization, then this will be empty and so you can create a ticket in the Helpdesk to request one.
+
+![Figure 8](figures/figure8a.png) Figure 8: Retrieving SITE ID from the Dashboard.
+
   Special attention should be given to **embedded text** in images, that may contain patient-identifiable information, as well as **skull and head images** that pose a risk of patient re-identification. You may need to apply additional de-identification techniques to mitigate this risk.  
 * **Re-identification risk assessment (optional)**: For assessing the risk of re-identification of patients based on your **imaging metadata** before sharing your dataset and further anonymizing your dataset through well known privacy models, you may use the [EUCAIM **Wizard tool**](https://bio.tools/eucaim_wizard_tool). Extraction of imaging metadata to feed the wizard tool is possible by using the [**DICOM tags extractor**](https://bio.tools/dicom_tags_extractor) tool ([Figure 8](#fig_dataanon)). Even if no automatic re-identification risk analysis on a combination of clinical and imaging metadata is possible at this Tier, you should carefully assess that no direct or indirect identifiers are present in your clinical data. 
 
 
-![Figure 8: Recommended de-identification process workflow.](figures/image8.png)
+![fig_dataanon](figures/image8.png)Figure 9: Recommended de-identification process workflow.
 
 * **Data quality check (first level \- optional)** :   
   * You may check the **accuracy** and **integrity** of your imaging dataset using the [**DICOM File integrity checker**](https://bio.tools/dicom_file_integrity_checker_by_gibi230).  
