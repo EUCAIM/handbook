@@ -24,21 +24,21 @@ Table of contents
 
 
 
-[**1\. Introduction**](Introduction.md)
+[**1\. Introduction**](https://eucaim.gitbook.io/handbook/introduction)
 
-&nbsp;[1.1. Purpose of the handbook](Introduction.md#purpose-of-the-handbook)
+&nbsp;&nbsp;&nbsp;&nbsp;[1.1. Purpose of the handbook](https://eucaim.gitbook.io/handbook/introduction#id-1.1.-purpose-of-the-handbook)
 
-&nbsp;[1.2. Overview of EUCAIM Data Federation, Data Holder’s Onboarding Workflow](Introduction.md#overview-of-eucaim-data-federation,-data-holder’s-onboarding-workflow)
+&nbsp;&nbsp;&nbsp;&nbsp;[1.2. Overview of EUCAIM Data Federation, Data Holder’s Onboarding Workflow](https://eucaim.gitbook.io/handbook/introduction#id-1.2.-overview-of-eucaim-data-federation-data-holders-onboarding-workflow)
 
-[**2\. Governance	**](Governance.md)
+[**2\. Governance**](https://eucaim.gitbook.io/handbook/governance)
   
-&nbsp;[2.1. Data governance](Governance.md#data-governance)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.1. Data governance](Governance.md#data-governance)
 
-[**3\. Onboarding Process**](Onboarding.md)
+[**3\. Onboarding Process**](https://eucaim.gitbook.io/handbook/onboarding)
   
-&nbsp;[3.1. Initial requirements and commitments](Onboarding.md#initial-requirements-and-commitments)
+&nbsp;&nbsp;&nbsp;&nbsp;[3.1. Initial requirements and commitments](Onboarding.md#initial-requirements-and-commitments)
   
-&nbsp;[3.2. Legal documents.](Onboarding.md#legal-documents.)
+&nbsp;&nbsp;&nbsp;&nbsp;[3.2. Legal documents.](Onboarding.md#legal-documents.)
 
 [**4\. Support and communication**](Support.md)
   
