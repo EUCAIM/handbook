@@ -42,41 +42,41 @@ Table of contents
 
 [**4\. Support and communication**](Support.md)
   
-&nbsp;[4.1. Engagement Team](Support.md#engagement-team)
+&nbsp;&nbsp;&nbsp;&nbsp;[4.1. Engagement Team](Support.md#engagement-team)
   
-&nbsp;[4.2. Helpdesk](Support.md#helpdesk)
+&nbsp;&nbsp;&nbsp;&nbsp;[4.2. Helpdesk](Support.md#helpdesk)
   
-&nbsp;[4.3. EUCAIM training platform: Overview of courses and access](Support.md#eucaim-training-platform:-overview-of-courses-and-access)
+&nbsp;&nbsp;&nbsp;&nbsp;[4.3. EUCAIM training platform: Overview of courses and access](Support.md#eucaim-training-platform)
 
 [**5\. Data Preparation process**](DataPreparation.md)
   
-&nbsp;[5.1. Data Preparation tools](DataPreparation.md#data-preparation-tools)
+&nbsp;&nbsp;&nbsp;&nbsp;[5.1. Data Preparation tools](DataPreparation.md#data-preparation-tools)
   
-&nbsp;[5.2. Tier 1 datasets](DataPreparation.md#tier-1-datasets)
+&nbsp;&nbsp;&nbsp;&nbsp;[5.2. Tier 1 datasets](DataPreparation.md#tier-1-datasets)
   
-&nbsp;[5.3. Tier 2 and 3 datasets](DataPreparation.md#tier-2-and-3-datasets)
+&nbsp;&nbsp;&nbsp;&nbsp;[5.3. Tier 2 and 3 datasets](DataPreparation.md#tier-2-and-3-datasets)
 
 [**6\. Option 1: Transfer to Reference Node**](Transfer.md)
   
-&nbsp;[6.1. Reference Nodes](Transfer.md#reference-nodes)
+&nbsp;&nbsp;&nbsp;&nbsp;[6.1. Reference Nodes](Transfer.md#reference-nodes)
   
-&nbsp;[6.2. Transferring data to the nodes](Transfer.md#transferring-data-to-the-nodes)
+&nbsp;&nbsp;&nbsp;&nbsp;[6.2. Transferring data to the nodes](Transfer.md#transferring-data-to-the-nodes)
 
 [**7\. Option 2: Setting up a Federated Node**](Federated.md)
 
-&nbsp;[7.1. Setting up the node](Federated.md#setting-up-the-node)
+&nbsp;&nbsp;&nbsp;&nbsp;[7.1. Setting up the node](Federated.md#setting-up-the-node)
     
-&nbsp;&nbsp;[7.1.1. Security and privacy considerations](Federated.md#security-and-privacy-considerations)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.1.1. Security and privacy considerations](Federated.md#security-and-privacy-considerations)
   
-&nbsp;&nbsp;[7.1.2. Service Level Agreement](Federated.md#service-level-agreement)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.1.2. Service Level Agreement](Federated.md#service-level-agreement)
   
-&nbsp;[7.2. Tier 1 compliance](Federated.md#tier-1-compliance)
+&nbsp;&nbsp;&nbsp;&nbsp;[7.2. Tier 1 compliance](Federated.md#tier-1-compliance)
   
-&nbsp;[7.3. Tier 2 compliance](Federated.md#tier-2-compliance)
+&nbsp;&nbsp;&nbsp;&nbsp;[7.3. Tier 2 compliance](Federated.md#tier-2-compliance)
   
-&nbsp;&nbsp;[7.3.1. Node Registration and Deployment](#7.3.1.-node-registration-and-deployment)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.3.1. Node Registration and Deployment](Federated.md#7.3.1.-node-registration-and-deployment)
   
-&nbsp;[7.4. Tier 3 compliance](#7.4.-tier-3-compliance)
+&nbsp;&nbsp;&nbsp;&nbsp;[7.4. Tier 3 compliance](Federated.md#7.4.-tier-3-compliance)
 
 [**10\. References**](References.md)
 
