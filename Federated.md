@@ -1,5 +1,8 @@
 # 7\. Option 2: Setting up a Federated Node  {#7.-option-2:-setting-up-a-federated-node}
 
+This section describes the requirements and process of setting up a node, including the security and privacy considerations and the expected Service Level Agreement. It describes the requirements and setps to achieve Tier 1 to Tier 3 compliance. Additionally, [section 7.5]({#7.5.-setting-up-a-local-node-with-mini-node}) describes the EUCAIM mini-node Software package, which provides an open-source solution for setting up a minimal node, capable of reachin Tier-2 compliance at the level of the services and Tier-3 compliance at the level of the data. Data Holders that have not set up their own node could find in this package a helpful software stack to deploy their own nodes.
+
+
 ## 7.1. Setting up the node {#7.1.-setting-up-the-node}
 
 Data holders who opt to host the data locally must set up a local node capable of storing and processing the data extracted, anonymised and standardised. The requirements for the node depend on the amount of data to be processed. [Table 7](#tab_localnodespec2) and [Table 8](#tab_localnodespec3) show the minimum required expected for Tier 2 and Tier 3 node.
@@ -197,3 +200,79 @@ The following is the usual “step-by-step” procedure to deploy FEM-client, th
    * Technical team will then send you a separate email containing your FEM-client credentials.  
 4. **Final Setup & Testing**  
    * After setup, we’ll run some tests to verify: 1\) Network connectivity; 2\) FEM-client’s ability to access local infrastructure and trigger container executions; and 3\) materialization of data for EUCAIM.
+  
+## 7.5. Setting up a local node with Mini-node {#7.5.-setting-up-a-local-node-with-mini-node}
+
+Data holders that do not have a local node could easily deploy a minimal node capable of providing access to data to data users and link to the EUCAIM federation by means of the EUCAIM mini node ([https://github.com/EUCAIM/mini-node](https://github.com/EUCAIM/mini-node)). The mini node currently features:
+
+- A local catalogue to organize the data provided by the Data Holder.
+- An AAI service based on Keycloak, with scripts to automatically configure the permissions.
+- An environment to deploy secure Virtual Research Environments for Data Users to access the data securely.
+- An Application Manager to manage a catalogue of applications to be deployed in the VREs.
+- An endpoint to expose the data to the Federated Search service of EUCAIM.
+
+The mini node will be extended with the capability of running batch jobs and the materialisator component to integrate with the Federated Processing.
+
+### 7.5.1. Requirements {#7.5.1-requirements}
+
+Mini node works on top of a Kubernetes cluster and users scripts in Python. If the expected workload is limited (in the order o5 5 concurrent users as a maxium), the whole node can be setup in a single computer, following the Tier 2/3 hardware requirements described at the begining of the section. Linux is preferrable, but the setup of Kubernetes provides a virtualization layer that could overcome this requirement. With respect to the Kubernetes release, despite that the mini node manifests could work with any compatible distribution, we encourage the usage of (minikube)[https://minikube.sigs.k8s.io/docs/]. The installation of minikube is well described in the documentation available in the previous link. 
+
+Additionally, the host computer must have:
+- Python 3.8+ to run the configuration scripts.
+- Kebernetes minikube installed and configured with the addons ingress and Helm.
+- Kubectl and Helm shortcuts available in your PATH.
+- GitHub SSH key configured.
+
+The ([https://github.com/EUCAIM/mini-node](https://github.com/EUCAIM/mini-node)) repository contains the scripts and configuration files to automate the deployment of a mini EUCAIM node using Kubernetes and Minikube. It includes automated installation for Keycloak, Guacamole, and the Dataset Service, with all secrets and configuration injected from a single YAML file.
+
+### 7.5.2. Minikube customisation {#7.5.2-minikube-customisation}
+
+The mini node expects that the Data Holder deposits the imaging data on a directory accessible by its dataset service. By default, Minikube’s default hostPath provisioner stores PersistentVolume data inside the Minikube VM/container. When using the Docker driver, this means that the data lives inside the ephemeral Minikube container and will be lost if the cluster is deleted or recreated.
+
+To ensure data is stored on the host machine and survives Minikube restarts, we should configure a host directory mount at startup so that /var/hostpath-provisioner in Minikube points to a persistent directory on your host.
+
+Example (Linux and macOs host):
+```
+minikube start --driver=docker --addons ingress \
+               --cpus 8  --memory 32g \
+               --mount --mount-string="/home/ubuntu/minikube-data:/var/hostpath-provisioner"
+```
+
+Example (Windows host):
+
+**Important:** For the mount to work on Windows, the host path must be inside a directory that Docker Desktop has shared with the internal Linux VM. This is configured in Docker Desktop → Settings → Resources → File Sharing.
+
+```
+minikube start --driver=docker --addons ingress \
+               --cpus 8  --memory 32g \
+               --mount --mount-string="C:/Users/<username>/minikube-data:/var/hostpath-provisioner"
+```
+
+Additionally, it is important to have shortcuts for the `kubectl` (the command that interacts with minikube) and `helm` (the command that interacts with the Helm chart manager, as the automated scripts will expect them to be available in the `PATH`. For this purpose, the following commands can be run:
+```
+alias 'kubectl=minikube kubectl --`
+alias 'helm=minikube helm --`
+```
+
+### 7.5.3. Mini node installation {#7.5.2-mini-node-installation}
+
+For the installation of mini node, the repository provides the Data Holder with three files:
+
+- install.py – Main Python script to deploy all services and inject configuration.
+- config.py – Configuration loader and validation logic.
+- config.yaml – Example configuration file for secrets, domains, and service parameters.
+
+The steps that should be followed are:
+
+1. Clone this repository:
+
+  `git clone https://github.com/EUCAIM/mini-node.git`<br/>
+  `cd mini-node`
+
+2. Edit config.yaml
+Fill in your domain, passwords, and other required values.
+
+3. Run the installer with python install.py:
+
+- micro: Installs Keycloak, Dataset Service, and Guacamole.
+- mini: Installs KubeApps, K8s Operator and Federated Search. (In progress).
