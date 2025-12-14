@@ -16,7 +16,7 @@ For this purpose, several tools have been selected and developed in EUCAIM. [Fig
 |    |    |
 |---|---|
 | ![https://bio.tools/mitk](figures/image7-mitk.png)                       | ![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-.png) |
-| ![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-nifti.png) | ![https://bio.tools/dicom_file_integrity_checker_by_gibi230](figures/image7-tags.png) |
+| ![https://hub.docker.com/r/mariov687/dicomseg](figures/image7-nifti.png) | ![https://bio.tools/dicom_file_integrity_checker_by_gibi230](figures/image7-lethe.png) |
 | ![https://bio.tools/eucaim_dicom_anonymizer](figures/image7-anon.png)]   | ![https://bio.tools/trace4medicalimagecleaning](figures/image7-trace4med.png) |
 | ![https://bio.tools/dicom_tags_extractor](figures/image7-tags.png)       | ![](figures/image7-wiz.png) | 
 | ![https://bio.tools/eetl_toolset](figures/image7-etl.png) | |
