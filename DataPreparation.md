@@ -2,7 +2,9 @@
 
 The data compliance to the different tier levels can be performed progressively. The process starts with the extraction, annotation and de-identification of data and it is followed by three steps of standardisation, anonymisation check and quality check. [Figure 6](#fig_dataprep1) shows schematically those steps. 
 
-![fig_dataprep1](figures/image6.png)Figure 6: Steps for data preparation. Steps in bold are mandatory
+![fig_dataprep1](figures/image6.png)
+
+Figure 6: Steps for data preparation. Steps in bold are mandatory
 
 The details of the steps will be provided in the following sections, but the outline is the following:
 
@@ -49,13 +51,17 @@ The preparation of your dataset will follow the steps indicated in [Figure 6](#
 * **Format standardization (optional)**: it is recommended that  your imaging raw data are in DICOM format, and if applicable, that your annotations are in DICOM-SEG. If you need to convert annotation files to DICOM-SEG, you may use the EUCAIM [**DicomSeg converter**](https://hub.docker.com/r/mariov687/dicomseg) tool.   
 * **De-identification** **(mandatory)**: you must ensure that no identifiable information (direct or indirect) is present in the dataset you will share. If your imaging data are not already de-identified, you may use the [**Lethe EUCAIM Anonymizer**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/) ([Figure 8](#fig_dataanon)). In this case, you must ensure that the patient ID linking clinical and imaging data is identical and listed as the first variable in the clinical dataset for tabular data. Moreover, the tool requires as input the SITE_ID, the unique identifier of the data provider, which is you can see in your user profile from the [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/). In case your Life Science account is not assigned to a known organization, then this will be empty and so you can create a ticket in the Helpdesk to request one.
 
-![Figure 8](figures/figure8a.png) Figure 8: Retrieving SITE ID from the Dashboard.
+![Figure 8](figures/figure8a.png) 
+
+Figure 8: Retrieving SITE ID from the Dashboard.
 
   Special attention should be given to **embedded text** in images, that may contain patient-identifiable information, as well as **skull and head images** that pose a risk of patient re-identification. You may need to apply additional de-identification techniques to mitigate this risk.  
 * **Re-identification risk assessment (optional)**: For assessing the risk of re-identification of patients based on your **imaging metadata** before sharing your dataset and further anonymizing your dataset through well known privacy models, you may use the [EUCAIM **Wizard tool**](https://bio.tools/eucaim_wizard_tool). Extraction of imaging metadata to feed the wizard tool is possible by using the [**DICOM tags extractor**](https://bio.tools/dicom_tags_extractor) tool ([Figure 8](#fig_dataanon)). Even if no automatic re-identification risk analysis on a combination of clinical and imaging metadata is possible at this Tier, you should carefully assess that no direct or indirect identifiers are present in your clinical data. 
 
 
-![fig_dataanon](figures/image8.png)Figure 9: Recommended de-identification process workflow.
+![fig_dataanon](figures/image8.png)
+
+Figure 9: Recommended de-identification process workflow.
 
 * **Data quality check (first level \- optional)** :   
   * You may check the **accuracy** and **integrity** of your imaging dataset using the [**DICOM File integrity checker**](https://bio.tools/dicom_file_integrity_checker_by_gibi230).  
