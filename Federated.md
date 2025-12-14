@@ -52,7 +52,7 @@ The registration of the dataset on the public catalogue has been described in se
 
 - In the coming future, we will support the federation of datasets through a pull model in which datasets’ metadata is harvested by the central catalogue. This will require deploying a local registry and populating it with the information of the DH’s datasets.
 
-<img src="figures/image10.png" alt="Workflow for the tier 1 compliance in a Federated node" width="600" height="400">
+<img src="figures/image10.png" alt="Workflow for the tier 1 compliance in a Federated node" width="80%">
 
 <a id="fig_tier1fednode"></a>Figure 10: Workflow for the tier 1 compliance in a Federated node.
 
