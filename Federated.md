@@ -82,9 +82,9 @@ The steps that need to be developed are the following:
 | \# | Action | Documentation / Links |
 | :---- | :---- | :---- |
 | 1 | Metadata mapping | A mapping of the searchable items described in Tables 14 and 15 in D5.6 to the local variables should be defined. If the data is already transformed to the EUCAIM CDM (see Section 5.2), then this step is not required. |
-| 2 | Mediator component development | If you are not exposing the data following the FHIR Standard or as a CDM-compliant PostresSQL (which is the result ), you should develop your own component to adapt the queries. An example of such component can be found in D5.6 “ Section 5.2.1 *Dataset in a Federated Node*, subsection “Guidelines for creating a mapping component”. |
+| 2a | Mediator component deployment (recommended) | The deployment of the SQL-based mediator component can be done as a Docker container. Section 7.3.1 Describes the process (if you are using a [mini node](#7.5.-setting-up-a-local-node-with-mini-node), this will be performed automatically). |
+| 2b | Mediator component development (optional) | If you are not exposing the data following the FHIR Standard or as a CDM-compliant PostresSQL (which is the result ), you should develop your own component to adapt the queries. An example of such component can be found in D5.6 “ Section 5.2.1 *Dataset in a Federated Node*, subsection “Guidelines for creating a mapping component”. |
 | 3 | Request registration in the explorer | Once the components are deployed, a ticket in the helpdesk, under the category “federated search” should be created with the request “register a new federated search provider”.  |
-| 4 | Mediator component deployment | The deployment of a mediator component can be done as a Docker container. Section 5.2.1 Dataset in a Federated Node of D5.6 shows an example. Detailed instructions are provided in the next subsection. |
 
 Once you have the component developed and deployed, the integration with the federated search central services requires several steps, which are detailed next. 
 
