@@ -82,10 +82,14 @@ This section summarises in a comprehensive table all the actions to be performed
       <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
         <ul>
           <li>Proof of legal representation and legal basis if necessary. </li>
+          <li>A copy of a favorable ethical approval (if applicable).</li>
           <li>A report from the DPO confirming legal compliance.</li>
-          <li>Data Protection Impact Assessment (DPIA) </li>
+          <li>GDPR compliance.</li>
+          <li>Data Protection Impact Assessment (DPIA), if applicable.</li>
           <li>Documents demonstrating the security of the information system.</li>
           <li>Any documents required under your national legislation. </li>
+          <li>Evidence of an adequate anonymization/pseudonymization process that has been carried out.</li>
+          <li>Terms of Usage for the data.</li>       
         </ul>
       </td>
       <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
@@ -332,7 +336,7 @@ This section summarises in a comprehensive table all the actions to be performed
       </td>
       <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
         <a href="https://help.cancerimage.eu">https://help.cancerimage.eu</a>
-        <br>Catalogue metadata spreadsheet: <a href="https://u.i3m.upv.es/9gx81">https://u.i3m.upv.es/9gx81</a> 
+        <br><a href="https://docs.google.com/spreadsheets/d/1Nm2l7cRv8T8NmlUdfwaBm0kMDNsCV4UQ/edit?usp=sharing&ouid=102741390744373897413&rtpof=true&sd=true">Catalogue metadata spreadsheet.</a> 
       </td>
     </tr>
     <tr>
