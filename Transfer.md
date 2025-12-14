@@ -14,7 +14,8 @@ Details on the features supported by each Reference node are provided in D5.6, s
 
 The workflow for uploading the datasets is described in [figure 9](#fig_dataing1). [Table 5](#tab_6REFUPV) and [Table 6](#tab_6REFHRI) describe the individual steps required to fulfil the process for each one of the reference nodes.
 
-![Figure 9](figures/image9.png) Figure9: Steps in the process of transferring data to the nodes. Steps in purple are covered in section 5\. Steps in blue (5-10) are described in tables [Table 5](#tab_6REFUPV) and [Table 6](#tab_6REFHRI).
+![Figure 9](figures/image9.png) 
+Figure9: Steps in the process of transferring data to the nodes. Steps in purple are covered in section 5\. Steps in blue (5-10) are described in tables [Table 5](#tab_6REFUPV) and [Table 6](#tab_6REFHRI).
 
 | \# | Action | Documentation / Links |
 | :---- | :---- | :---- |
