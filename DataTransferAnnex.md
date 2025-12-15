@@ -24,7 +24,7 @@ This section summarises in a comprehensive table all the actions to be performed
           font-weight: bold;
           padding: 10px;
         ">
-          Initial Assessment
+          Initial Assessment.
         </div>
       </td>
       <td style="border: 1px solid black; padding: 8px; vertical-align: top;">
