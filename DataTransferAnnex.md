@@ -20,8 +20,6 @@ This section summarises in a comprehensive table all the actions to be performed
           justify-content: center;
           text-align: center; 
           /* CSS for vertical text */
-          transform: rotate(-90deg);
-          transform-origin: 50% 50%;
           white-space: nowrap;
           font-weight: bold;
           padding: 10px;
