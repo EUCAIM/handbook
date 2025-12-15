@@ -2,13 +2,6 @@ This section summarises in a comprehensive table all the actions to be performed
 
 
 <table>
-  <thead>
-    <tr>
-      <th>Action</th>
-      <th>Description</th>
-      <th>Documents</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td colspan="3">
@@ -16,9 +9,20 @@ This section summarises in a comprehensive table all the actions to be performed
       </td>
     </tr>
     <tr>
-      <td>Submit an application for data incorporation use cases</td>
-      <td>Complete the application for data incorporation use cases form for the Access Committee to evaluate the scientific relevance of your participation in EUCAIM as a data holder.</td>
-      <td><a href="#">External application form - Stakeholders - Data Holders</a></td>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Documents</th>
+    </tr>
+    <tr>
+      <td>
+        Submit an application for data incorporation use cases
+      </td>
+      <td>
+        Complete the application for data incorporation use cases form for the Access Committee to evaluate the scientific relevance of your participation in EUCAIM as a data holder.
+      </td>
+      <td>
+        <a href="#">External application form - Stakeholders - Data Holders</a>
+      </td>
     </tr>
     <tr>
       <td>
@@ -42,77 +46,21 @@ This section summarises in a comprehensive table all the actions to be performed
         <a href="https://dashboard.eucaim.cancerimage.eu/data-warehouse-maturity-questionnaire">https://dashboard.eucaim.cancerimage.eu/data-warehouse-maturity-questionnaire</a>
       </td>
     </tr>
-    <tr>
+  </tbody>
+</table>
+
+
+<table>
+  <tbody>
+      <tr>
       <td colspan="3">
       <div align="center">Ethical and Legal</div>
       </td>
     </tr>
     <tr>
-      <td>
-        Provide documentation
-      </td>
-      <td>
-        <ul>
-            <li>Proof of legal representation and legal basis if necessary.</li>
-            <li>A copy of a favorable ethical approval (if applicable).</li>
-            <li>A report from the DPO confirming legal compliance.</li>
-            <li>Any documents required under your national legislation</li>
-            <li>Terms of Usage for the data.</li>
-        </ul>
-      </td>
-      <td>
-        <a href="#">D4.4 Final rules for participation report</a> (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders)
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Data Transfer Agreement
-      </td>
-      <td>
-        Fill-in and sign the DTA
-      </td>
-      <td>
-        - <a href="#">Draft DTA</a>
-      </td>
-    </tr>    
-        <tr>
-      <td colspan="3">
-      <div align="center">Preliminaries</div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Get Familiar with EUCAIM
-      </td>
-      <td>
-        <ul>
-            <li>Follow the EUCAIM training material and brief documents.</li>
-            <li>Browse architecture and</li>
-            <li>Watch webinars and videos.</li>
-        </ul>
-      </td>
-      <td
-        - <a href="https://dashboard.eucaim.cancerimage.eu">https://dashboard.eucaim.cancerimage.eu</a>
-        - <a href="https://eucaim.gitbook.io/end-user-guide">https://eucaim.gitbook.io/end-user-guide</a>
-        - <a href="https://www.youtube.com/@EUCAIM">https://www.youtube.com/@EUCAIM</a>
-        - <a href="https://training.eucaim.cancerimage.eu">https://training.eucaim.cancerimage.eu</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Request a EUCAIM User
-      </td>
-      <td>
-        Request a EUCAIM User in the Dashboard through LS-AAI.
-      </td>
-      <td>
-        - <a href="#">Registration of users in EUCAIM</a>
-      </td>
-    </tr>
-        <tr>
-      <td colspan="3">
-      <div align="center">Ethical and Legal</div>
-      </td>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Documents</th>
     </tr>
     <tr>
       <td>
@@ -142,10 +90,21 @@ This section summarises in a comprehensive table all the actions to be performed
         - <a href="#">Draft DTA</a>
       </td>
     </tr>
-        <tr>
+  </tbody>
+</table>
+
+
+<table>
+  <tbody>
+    <tr>
       <td colspan="3">
       <div align="center">Preliminaries</div>
       </td>
+    </tr>
+    <tr>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Documents</th>
     </tr>
     <tr>
       <td>
@@ -159,9 +118,9 @@ This section summarises in a comprehensive table all the actions to be performed
         </ul>
       </td>
       <td>
-        - <a href="https://dashboard.eucaim.cancerimage.eu">https://dashboard.eucaim.cancerimage.eu</a>
-        - <a href="https://eucaim.gitbook.io/end-user-guide">https://eucaim.gitbook.io/end-user-guide</a>
-        - <a href="https://www.youtube.com/@EUCAIM">https://www.youtube.com/@EUCAIM</a>
+        - <a href="https://dashboard.eucaim.cancerimage.eu">https://dashboard.eucaim.cancerimage.eu</a><br/>
+        - <a href="https://eucaim.gitbook.io/end-user-guide">https://eucaim.gitbook.io/end-user-guide</a><br/>
+        - <a href="https://www.youtube.com/@EUCAIM">https://www.youtube.com/@EUCAIM</a><br/>
         - <a href="https://training.eucaim.cancerimage.eu">https://training.eucaim.cancerimage.eu</a>
       </td>
     </tr>
@@ -176,10 +135,21 @@ This section summarises in a comprehensive table all the actions to be performed
         - <a href="#">Registration of users in EUCAIM</a>
       </td>
     </tr>
-        <tr>
+  </tbody>
+</table>
+
+
+<table>
+  <tbody>
+    <tr>
       <td colspan="3">
       <div align="center">Data Preparation</div>
       </td>
+    </tr>
+    <tr>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Documents</th>
     </tr>
     <tr>
       <td>
@@ -200,7 +170,7 @@ This section summarises in a comprehensive table all the actions to be performed
         Use your own annotation tool or the one selected by EUCAIM (MITK). Convert the annotations into DICOM-SEG.
       </td>
       <td>
-        - <a href="#">MITK (Medical Imaging Interaction Toolkit) Workbench</a>
+        - <a href="#">MITK (Medical Imaging Interaction Toolkit) Workbench</a><br/>
         - <a href="#">DicomSeg converter</a>
       </td>
     </tr>
@@ -237,10 +207,21 @@ This section summarises in a comprehensive table all the actions to be performed
         - <a href="#">DICOM File integrity checker</a>
       </td>
     </tr>
-        <tr>
+  </tbody>
+</table>
+
+
+<table>
+  <tbody>
+    <tr>
       <td colspan="3">
       <div align="center">Data Uploading</div>
       </td>
+    </tr>
+    <tr>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Documents</th>
     </tr>
     <tr>
       <td>
@@ -297,15 +278,26 @@ This section summarises in a comprehensive table all the actions to be performed
         Once medical imaging data is uploaded, you can proceed with the clinical data. If the process of converting the clinical data is expected to be long, we encourage you to create an “image-only” dataset by skipping this step. Use the same tool as before for UPV and XNATpy for Health-RI. Data can be in CSV or JSON.
       </td>
       <td>
-        - <a href="#">User Guide for Data holders</a>, <a href="https://eucaim.gitbook.io/enduserguide/6-userguide4members">https://eucaim.gitbook.io/enduserguide/6-userguide4members</a>
-        - <a href="#">QP-Insights Uploader</a>, <a href="https://bio.tools/qp-insights_uploader">https://bio.tools/qp-insights_uploader</a>
+        - <a href="#">User Guide for Data holders</a>, <a href="https://eucaim.gitbook.io/enduserguide/6-userguide4members">https://eucaim.gitbook.io/enduserguide/6-userguide4members</a><br/>
+        - <a href="#">QP-Insights Uploader</a>, <a href="https://bio.tools/qp-insights_uploader">https://bio.tools/qp-insights_uploader</a><br/>
         - <a href="#">XNATpy</a>, <a href="https://xnat.readthedocs.io/en/latest/">https://xnat.readthedocs.io/en/latest/</a>
       </td>
     </tr>
-        <tr>
+  </tbody>
+</table>
+
+
+<table>
+  <tbody>
+    <tr>
       <td colspan="3">
       <div align="center">Dataset Creation</div>
       </td>
+    </tr>
+    <tr>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Documents</th>
     </tr>
     <tr>
       <td>
@@ -314,7 +306,7 @@ This section summarises in a comprehensive table all the actions to be performed
       <td>
         The dataset has to be created according to the instructions in the Gitbook (section 6.2.2.3 for UPV and 6.2.3 for Health-RI).
       </td>
-      <td></td>
+      <td>
         - <a href="#">User Guide for Data holders</a>
       </td>
     </tr>
