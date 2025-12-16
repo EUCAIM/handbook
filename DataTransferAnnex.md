@@ -1,18 +1,16 @@
 This section summarises in a comprehensive table all the actions to be performed in the case of Data Holders that will upload their data into a reference node.
 
 
+<h2 align="center">Initial Assessment</h2>
 <table>
-  <tbody>
-    <tr>
-      <td colspan="3">
-      <div align="center">Initial Assessment</div>
-      </td>
-    </tr>
+  <thead>
     <tr>
       <th>Action</th>
       <th>Description</th>
       <th>Documents</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
         Submit an application for data incorporation use cases
@@ -50,18 +48,17 @@ This section summarises in a comprehensive table all the actions to be performed
 </table>
 
 
+<br/>
+<h2 align="center">Ethical and Legal</h2>
 <table>
-  <tbody>
-      <tr>
-      <td colspan="3">
-      <div align="center">Ethical and Legal</div>
-      </td>
-    </tr>
+  <thead>
     <tr>
       <th>Action</th>
       <th>Description</th>
       <th>Documents</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
         Provide documentation
@@ -94,18 +91,17 @@ This section summarises in a comprehensive table all the actions to be performed
 </table>
 
 
+<br/>
+<h2 align="center">Preliminaries</h2>
 <table>
-  <tbody>
-    <tr>
-      <td colspan="3">
-      <div align="center">Preliminaries</div>
-      </td>
-    </tr>
+  <thead>
     <tr>
       <th>Action</th>
       <th>Description</th>
       <th>Documents</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
         Get Familiar with EUCAIM
@@ -139,18 +135,17 @@ This section summarises in a comprehensive table all the actions to be performed
 </table>
 
 
+<br/>
+<h2 align="center">Data Preparation</h2>
 <table>
-  <tbody>
-    <tr>
-      <td colspan="3">
-      <div align="center">Data Preparation</div>
-      </td>
-    </tr>
+  <thead>
     <tr>
       <th>Action</th>
       <th>Description</th>
       <th>Documents</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
         Extract Imaging and clinical data
@@ -211,18 +206,17 @@ This section summarises in a comprehensive table all the actions to be performed
 </table>
 
 
+<br/>
+<h2 align="center">Data Uploading</h2>
 <table>
-  <tbody>
-    <tr>
-      <td colspan="3">
-      <div align="center">Data Uploading</div>
-      </td>
-    </tr>
+  <thead>
     <tr>
       <th>Action</th>
       <th>Description</th>
       <th>Documents</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
         Provide Data Ingester Account Details
@@ -242,7 +236,8 @@ This section summarises in a comprehensive table all the actions to be performed
         Download the Data Ingestion tool for the UPV node and the Clinical Trial Processor (CTP) for HealthRI
       </td>
       <td>
-        - <a href="#">QP-Insights Uploader</a> - <a href="#">CTP</a>.
+        - <a href="#">QP-Insights Uploader</a><br/>
+        - <a href="#">CTP</a>
       </td>
     </tr>
     <tr>
@@ -287,18 +282,17 @@ This section summarises in a comprehensive table all the actions to be performed
 </table>
 
 
+<br/>
+<h2 align="center">Dataset Creation</h2>
 <table>
-  <tbody>
-    <tr>
-      <td colspan="3">
-      <div align="center">Dataset Creation</div>
-      </td>
-    </tr>
+  <thead>
     <tr>
       <th>Action</th>
       <th>Description</th>
       <th>Documents</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
         Create and Publish the Dataset
@@ -307,7 +301,7 @@ This section summarises in a comprehensive table all the actions to be performed
         The dataset has to be created according to the instructions in the Gitbook (section 6.2.2.3 for UPV and 6.2.3 for Health-RI).
       </td>
       <td>
-        - <a href="#">User Guide for Data holders</a>
+        <a href="#">User Guide for Data holders</a>
       </td>
     </tr>
     <tr>
@@ -318,7 +312,7 @@ This section summarises in a comprehensive table all the actions to be performed
         Provide the metadata of the datasets according to the EUCAIM schema. In case of doubts with the terminology, use textual descriptions.
       </td>
       <td>
-        - <a href="#">EUCAIM Dataset metadata</a> or <a href="#">Molgenis excel template</a>
+        <a href="#">EUCAIM Dataset metadata</a> or <a href="#">Molgenis excel template</a>
       </td>
     </tr>
     <tr>
@@ -329,7 +323,7 @@ This section summarises in a comprehensive table all the actions to be performed
         Create a helpdesk ticket on the category catalogue, providing the spreadsheet file with the metadata information. The helpdesk team will contact you back informing if the dataset has been properly registered or requesting more information.
       </td>
       <td>
-        - <a href="https://help.cancerimage.eu">https://help.cancerimage.eu</a>
+        <a href="https://help.cancerimage.eu">https://help.cancerimage.eu</a>
       </td>
     </tr>
     <tr>
