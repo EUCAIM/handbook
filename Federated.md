@@ -215,11 +215,11 @@ The mini node will be extended with the capability of running batch jobs and the
 
 ### 7.5.1. Requirements {#7.5.1-requirements}
 
-Mini node works on top of a Kubernetes cluster and users scripts in Python. If the expected workload is limited (in the order o5 5 concurrent users as a maxium), the whole node can be setup in a single computer, following the Tier 2/3 hardware requirements described at the begining of the section. Linux is preferrable, but the setup of Kubernetes provides a virtualization layer that could overcome this requirement. With respect to the Kubernetes release, despite that the mini node manifests could work with any compatible distribution, we encourage the usage of (minikube)[https://minikube.sigs.k8s.io/docs/]. The installation of minikube is well described in the documentation available in the previous link. 
+Mini node works on top of a Kubernetes cluster and users scripts in Python. If the expected workload is limited (in the order o5 5 concurrent users as a maxium), the whole node can be setup in a single computer, following the Tier 2/3 hardware requirements described at the beginning of the section. Linux is preferrable, but the setup of Kubernetes provides a virtualization layer that could overcome this requirement. With respect to the Kubernetes release, despite that the mini node manifests could work with any compatible distribution, we encourage the usage of (minikube)[https://minikube.sigs.k8s.io/docs/]. The installation of minikube is well described in the documentation available in the previous link. 
 
 Additionally, the host computer must have:
 - Python 3.8+ to run the configuration scripts.
-- Kebernetes minikube installed and configured with the addons ingress and Helm.
+- Kubernetes minikube installed and configured with the addons ingress and Helm.
 - Kubectl and Helm shortcuts available in your PATH.
 - GitHub SSH key configured.
 
