@@ -27,7 +27,7 @@ For this purpose, several tools have been selected and developed in EUCAIM. [Fig
 
 ## 5.1. Downloading data preparation tools {#5.1.-downloading-data-preparation-tools}
 Data holders can get information on the data preparation tools (listed in the following subsections) in the bio tools catalogue ([https://bio.tools/t?domain=eucaim](https://bio.tools/t?domain=eucaim)). The binaries of the tools can be downloaded from the EUCAIM Software artifacts registry ([https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories)). The access to the registry requires a valid account and additional permissions that can be requested on the first access to the registry. It is advisable that the data holder opens a ticket in the helpdesk in the enrollment group to speed-up the process of approval (only data holders and project members can download the tools). Instructions on the downloading and usage of each tool are given in the links provided in the description of the tools in the bio tools catalogue.
-For clarity, please find below a step-by-step guide on how to access the Harbor repository and download the required tools: [Accessing the Harbor and Downloading Tools](https://docs.google.com/document/d/1uLtiKaAu0zRDSDXFneReV5z51toiI_BO/edit#heading=h.3bnalyq7ei4m).
+For clarity, please find below a step-by-step guide on how to access the Harbor repository and download the required tools: [Accessing the Harbor and Downloading Tools](https://drive.eucaim.cancerimage.eu/s/pxpTJWSTFsLbqPQ). It is important to outline that data holders must select the role "Download Preparation Tools (Data Holders)" in order to get access to such tools.
 
 ## 5.2. Tier 1 datasets {#5.2.-tier-1-datasets}
 
