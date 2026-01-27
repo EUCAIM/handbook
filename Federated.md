@@ -218,14 +218,54 @@ The mini node will be extended with the capability of running batch jobs and the
 Mini node works on top of a Kubernetes cluster and users scripts in Python. If the expected workload is limited (in the order o5 5 concurrent users as a maxium), the whole node can be setup in a single computer, following the Tier 2/3 hardware requirements described at the beginning of the section. Linux is preferrable, but the setup of Kubernetes provides a virtualization layer that could overcome this requirement. With respect to the Kubernetes release, despite that the mini node manifests could work with any compatible distribution, we encourage the usage of (minikube)[https://minikube.sigs.k8s.io/docs/]. The installation of minikube is well described in the documentation available in the previous link. 
 
 Additionally, the host computer must have:
+- Operating System: Linux (Ubuntu/Debian recommended)
 - Python 3.8+ to run the configuration scripts.
 - Kubernetes minikube installed and configured with the addons ingress and Helm.
 - Kubectl and Helm shortcuts available in your PATH.
 - GitHub SSH key configured.
 
+
 The ([https://github.com/EUCAIM/mini-node](https://github.com/EUCAIM/mini-node)) repository contains the scripts and configuration files to automate the deployment of a mini EUCAIM node using Kubernetes and Minikube. It includes automated installation for Keycloak, Guacamole, and the Dataset Service, with all secrets and configuration injected from a single YAML file.
 
-### 7.5.2. Minikube customisation {#7.5.2-minikube-customisation}
+### 7.5.2. Installing the prerequisites  {#7.5.2-installing-the-prerequisites}
+
+The following tools must be installed before running the installation:
+
+1. **Minikube** (for development/single-node setup)
+   ```bash
+   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   ```
+
+2. **Helm** (Kubernetes package manager)
+
+   #### Ubuntu:
+   ```bash
+   curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+   ```
+   
+   #### Windows:
+   1. Download the Helm binary from the [Helm Releases Page](https://github.com/helm/helm/releases).
+   2. Extract the binary and add it to your system's PATH.
+   3. Verify the installation by running:
+      ```bash
+      helm version
+      ```
+3. **Docker** (container runtime)
+   ```bash
+   curl -fsSL https://get.docker.com -o get-docker.sh
+   sudo sh get-docker.sh
+   ```
+
+4. **Git** (version control)
+   ```bash
+   sudo apt-get install git
+   ```
+
+5. **Python 3** with dependencies
+   ```bash
+   sudo apt-get install python3 python3-pip python3-yaml
+   ```
 
 The mini node expects that the Data Holder deposits the imaging data on a directory accessible by its dataset service. By default, Minikube’s default hostPath provisioner stores PersistentVolume data inside the Minikube VM/container. When using the Docker driver, this means that the data lives inside the ephemeral Minikube container and will be lost if the cluster is deleted or recreated.
 
@@ -253,26 +293,88 @@ Additionally, it is important to have shortcuts for the `kubectl` (the command t
 alias 'kubectl=minikube kubectl --`
 alias 'helm=minikube helm --`
 ```
+Newer versions of minikube do not support `helm` as an internal command. In this case, `helm` can be installed directly in the computer (see https://helm.sh/docs/intro/install/ ).
 
-### 7.5.3. Mini node installation {#7.5.2-mini-node-installation}
 
-For the installation of mini node, the repository provides the Data Holder with three files:
+### 7.5.3. Installing the software  {#7.5.3-installing-the-software}
+The  installation script (`install.py`) automates the deployment of:
+- Keycloak (authentication/authorization)
+- Dataset Service 
+- Dataset Explorer 
+- Guacamole 
+- Jobman
+- Harbor (container registry)
+- Kubeapps (application management)
+- Kubernetes Dashboard
+- DSWS Operator (workspace management)
+- Traefik 
+- cert-manager 
 
-- install.py – Main Python script to deploy all services and inject configuration.
-- config.py – Configuration loader and validation logic.
-- config.yaml – Example configuration file for secrets, domains, and service parameters.
+The installation script can install different flavours of the mini-node:
+- micro: Installs a non-federated local node with Keycloak, Dataset Service,  Guacamole, KubeApps, K8s Operator and jobman (the latter is in progress).
+- mini: Installs the local components for the Federated Search and the Federated Execution Management. (In progress).
 
-The steps that should be followed are:
+The following must exist in the installation directory:
 
-1. Clone this repository:
+1. **config.private.yaml** - Main configuration file
+   - Template: `config.yaml`
+   - Contains: domain, passwords, database settings, OIDC configuration, etc.
 
-  `git clone https://github.com/EUCAIM/mini-node.git`<br/>
-  `cd mini-node`
+2. **eucaim-node-realm.private.json** - Keycloak realm configuration
+   - Template: `eucaim-node-realm.json`
+   - Contains: client secrets, realm settings, identity providers
 
-2. Edit config.yaml
-Fill in your domain, passwords, and other required values.
+Before being able to download the repositories, you have to request access to the `k8s-deploy-node` repository in https://github.com/EUCAIM/k8s-deploy-node.  
 
-3. Run the installer with python install.py:
+1. **Prepare the environment**
+   ```bash
+   # Clone this repository
+   git clone <this-repo-url>
+   cd mini-node
+   # Clone k8s-deploy-node (mininode branch) and jobman inside mini-node
+   git clone --branch mininode git@github.com:EUCAIM/k8s-deploy-node.git
+   # If you do not have SSH keys configured for GitHub, use HTTPS instead:
+   # git clone --branch mininode https://github.com/EUCAIM/k8s-deploy-node.git
+   git clone https://github.com/EUCAIM/jobman.git
+   ```
 
-- micro: Installs Keycloak, Dataset Service, and Guacamole.
-- mini: Installs KubeApps, K8s Operator and Federated Search. (In progress).
+The folder structure should look like this:
+
+```
+<working-directory>/
+└── mini-node/
+   ├── k8s-deploy-node/
+   └── jobman/
+```
+
+2. **Create configuration files**
+   ```bash
+   # Copy and edit the configuration template
+   cp config.yaml config.private.yaml
+   nano config.private.yaml
+   
+   # Copy and edit the Keycloak realm template
+   cp eucaim-node-realm.json eucaim-node-realm.private.json
+   nano eucaim-node-realm.private.json
+   ```
+
+3. **Run the installation**
+   ```bash
+   python3 install.py <flavour>
+   ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
