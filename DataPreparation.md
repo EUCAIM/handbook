@@ -1,10 +1,20 @@
 # 5\. Data Preparation process {#5.-data-preparation-process}
 
-The data compliance to the different tier levels can be performed progressively. The process starts with the extraction, annotation and de-identification of data and it is followed by three steps of standardisation, anonymisation check and quality check. [Figure 6](#fig_dataprep1) shows schematically those steps. 
+The data compliance to the different tier levels can be performed progressively. The process starts with the annotation and de-identification of data and it is followed by three steps of standardisation, anonymisation check and quality check. [Figure 6](#fig_dataprep1) shows schematically those steps. 
 
 ![fig_dataprep1](figures/image6.png)
 
 Figure 6: Steps for data preparation. Steps in bold are mandatory
+
+Next table describes the requirements for the compliance at the different levels considering either the transfer or the sharing approaches.
+
+| | | |
+|---|---|---|
+| Requirement for | Dataset remains on premises | Dataset is exported to a reference node |
+| Tier 1 compliance | - Dataset must be registered in the public catalogue.<br> - Image and clinical data must be linked using a single, consistent patient identifier (patientID), preserved across all preparation steps. <br> - No entity (e.g. patient, observation, study, series) may be duplicated within the dataset.| - Dataset must be registered in the public catalogue. <br> - Image and clinical data must be linked using a single, consistent patient identifier (patientID), preserved across all preparation steps.<br> - No entity (e.g. patient, observation, study, series) may be duplicated within the dataset.<br> - De-identification and quality check is required prior to transfer.<br> - Imaging data must be accompanied by a set of minimum clinical metadata. Only-imaging datasets, with imaging attributes only, will be considered case-by-case before acceptance in the platform.<br> - To transfer the data to a reference node, format for images should be preferably DICOM objects. NIfTI could be also handled by both reference nodes (add link to instructions as ref). |
+| Tier 2 compliance | - Compliance with Tier 1 requirements. <br> - The metadata required for the federated search must be standardized and semantically aligned with the EUCAIM hyper-ontology. <br> - Compliance with the EUCAIM Common Data Model (CDM) is recommended but not mandatory. If the data is not transformed to the EUCAIM CDM, you must instead implement a mapping component that translates local data to the searchable variables required by the federated search. <br> - A query service component should be installed to run the search. | - Compliance with Tier 1 requirements. <br> - The metadata required for the federated search must be standardized and semantically aligned with the EUCAIM hyper-ontology. <br> - Compliance with the EUCAIM Common Data Model (CDM) is recommended but not mandatory. If the data is not transformed to the EUCAIM CDM, you must instead implement a mapping component that translates local data to the searchable variables required by the federated search. |
+| Tier 3 compliance | - Compliance with Tier 1 and Tier 2 requirements<br> - Quality and de-identification must be verified at the highest level. <br> - Provide imaging data in DICOM format; associated annotations and segmentations, when available, must be in DICOM-SEG format. Exceptions may be considered for diagnostic images in other formats, on a case-by-case basis. <br> - Full compliance with the EUCAIM Common Data Model (CDM) is required.<br> - Organize imaging and clinical data following the EUCAIM common file structure.<br> - Materialize imaging and clinical metadata according to the EUCAIM CDM.<br> - Data should be integrated into the materializer component.| - Compliance with Tier 1 and Tier 2 requirements. <br> - Quality and de-identification must be verified at the highest level. <br> - Provide imaging data in DICOM format; associated annotations and segmentations, when available, must be in DICOM-SEG format. Exceptions may be considered for diagnostic images in other formats, on a case-by-case basis. <br> - Full compliance with the EUCAIM Common Data Model (CDM) is required.<br> - Organize imaging and clinical data following the EUCAIM common file structure.<br> - Materialize imaging and clinical metadata according to the EUCAIM CDM.<br> - Data should be integrated to the materializer component.|
+|---|---|--|
 
 The details of the steps will be provided in the following sections, but the outline is the following:
 
@@ -24,6 +34,11 @@ For this purpose, several tools have been selected and developed in EUCAIM. [Fig
 | ![https://bio.tools/eetl_toolset](figures/image7-etl.png) | |
 
 [Figure 7](#figur_datatools): Data preparation tools. Click on the thumbnail for more information on the tool.
+
+
+
+
+
 
 ## 5.1. Downloading data preparation tools {#5.1.-downloading-data-preparation-tools}
 Data holders can get information on the data preparation tools (listed in the following subsections) in the bio tools catalogue ([https://bio.tools/t?domain=eucaim](https://bio.tools/t?domain=eucaim)). The binaries of the tools can be downloaded from the EUCAIM Software artifacts registry ([https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories)). The access to the registry requires a valid account and additional permissions that can be requested on the first access to the registry. It is advisable that the data holder opens a ticket in the helpdesk in the enrollment group to speed-up the process of approval (only data holders and project members can download the tools). Instructions on the downloading and usage of each tool are given in the links provided in the description of the tools in the bio tools catalogue.
