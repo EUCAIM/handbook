@@ -24,7 +24,7 @@ Table of contents
 
 
 
-[**1\. Introduction**](https://eucaim.gitbook.io/handbook/introduction)
+[**1\. Introduction**](https://eucaim.gitbook.io/handbook/introduction){:target="_blank"}
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1. Purpose of the handbook](https://eucaim.gitbook.io/handbook/introduction#id-1.1.-purpose-of-the-handbook)
 
