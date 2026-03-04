@@ -26,9 +26,6 @@ Table of contents
 
 [**1\. Introduction**](https://eucaim.gitbook.io/handbook/introduction){:target="_blank"}
 
-&nbsp;&nbsp;&nbsp;&nbsp;[1.1. Purpose of the handbook](https://eucaim.gitbook.io/handbook/introduction#id-1.1.-purpose-of-the-handbook)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.2. Overview of EUCAIM Data Federation, Data Holder’s Onboarding Workflow](https://eucaim.gitbook.io/handbook/introduction#id-1.2.-overview-of-eucaim-data-federation-data-holders-onboarding-workflow)
 
 [**2\. Governance**](https://eucaim.gitbook.io/handbook/governance)
   
