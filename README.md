@@ -78,7 +78,7 @@ Table of contents
   
 &nbsp;&nbsp;&nbsp;&nbsp;[7.4. Tier 3 compliance](Federated.md#7.4.-tier-3-compliance)
 
-[**10\. References**](References.md)
+[**8\. References**](References.md)
 
 [**ANNEX A: Data transfer checklist**](DataTransferAnnex.md)
 
