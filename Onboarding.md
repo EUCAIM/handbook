@@ -89,16 +89,17 @@ In both cases it is compulsory that the DPO and/or the legal representative of t
 | Data Transfer |  |  |
 | :---- | :---- | :---- |
 | **Action** | **Description** | **Documents** |
-| Provide documentation | Proof of legal representation and legal basis if necessary.  A copy of a favorable ethical approval (if applicable). A report from the DPO confirming legal compliance. Any documents required under your national legislation Terms of Usage for the data. | D4.4 [Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy)  (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders) |
-| Data Transfer Agreement | Fill-in and sign the DTA | [Draft DTA](https://drive.google.com/file/d/1F5zMFfhZ9u53gcMhxRNUZVivjqvLspkU/view?usp=sharing) |
-
+| Provide documentation | - Proof of legal representative, and legal basis if necessary.<br> - A copy of a favorable ethical approval (if applicable).<br> - A report from the DPO confirming legal compliance.<br> - Security compliance.<br> - GDPR compliance.<br> - Data Protection Impact Assessment (if applicable).<br> - Any documents required under the national legislation.<br> - Evidence of an adequate anonymization/pseudonymization process that has been carried out | For more information see primarily the [Legal Handbook](https://docs.google.com/document/d/1U-RpFycjXEVP-4-l9ppveT654x78Dhlw/edit?tab=t.0), [D4.4 Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy) (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders)
+Find also here the template for the DPO report: [faq_DPO_template.docx - Google Docs](https://docs.google.com/document/d/1KHf1nlCxFB1BjhhQXHVo4zVSoOBorL_X/edit) |
+| Data Transfer Agreement | Fill-in and sign the DTA | [DTA](https://drive.google.com/file/d/1TTuaFo4cWwomLJBtQbs_lkrBNFVSLH_L/view?usp=drive_link) |
 [Table 1](#table_DTA-1): Summary of steps to be completed for Data Transfer case.
 
 | Data Sharing |  |  |
 | :---- | :---- | :---- |
 | **Action** | **Description** | **Documents** |
-| Provide documentation | Proof of legal representation and legal basis if necessary.  A report from the DPO confirming legal compliance. Data Protection Impact Assessment (DPIA)  Documents demonstrating the security of the information system. Any documents required under your national legislation. | D4.4 [Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy)  (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders) |
-| Data Sharing Agreement | Fill-in and sign the DSA | [Draft DSA](https://drive.google.com/file/d/1UMdDF52mXGHNIL0GegzfyuSBVfKCIl7d/view?usp=sharing) |
+| Provide documentation | - Proof of legal representative, and legal basis if necessary.<br>- A copy of a favourable ethical approval (if applicable).<br>- A report from the DPO confirming legal compliance.<br>- GDPR compliance.<br>- Data Protection Impact Assessment (if applicable).<br>- Evidence of an adequate anonymization/pseudonymization process that has been carried out.<br>- Documents demonstrating the security of the information system.<br>- Any documents required under your national legislation.<br>| For more information see primarily the [Legal Handbook](https://docs.google.com/document/d/1U-RpFycjXEVP-4-l9ppveT654x78Dhlw/edit?tab=t.0), [D4.4 Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy) (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders)
+Find also here the template for the DPO report: [faq_DPO_template.docx - Google Docs](https://docs.google.com/document/d/1KHf1nlCxFB1BjhhQXHVo4zVSoOBorL_X/edit)  |
+| Data Sharing Agreement | Fill-in and sign the DSA | [DSA](https://drive.google.com/file/d/1-UyQ02w0-shmRgQgp8L1ATWs1JEco3_Y/view?usp=drive_link) |
 | Define especial Access Conditions | A Document to be signed by the Data User that indicates the conditions under the Data User can access the data. | [Draft Template](https://drive.google.com/file/d/1UMdDF52mXGHNIL0GegzfyuSBVfKCIl7d/view?usp=sharing) |
 | Contact point for the negotiation (Only in federated nodes) | The LS-AAI details of the data holder delegate who will interact with the Data User through the negotiator. | [Registration of users in EUCAIM](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) LS-AAI.  |
 
