@@ -795,19 +795,27 @@ convert them.
 You must ensure that no identifiable information (direct or indirect) is
 present in the dataset you will share (**Figure 9**).
 
-If your imaging data are not already de-identified , you may use the
-[**<u>Lethe EUCAIM
-Anonymizer</u>**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/)
-([<u>Figure
-7</u>](https://eucaim.gitbook.io/handbook/datapreparation#bookmark=kix.br72yai62sd4)).
-In this case, you must ensure the following:
+The official tool for de-identification in EUCAIM is [**<u>Lethe EUCAIM
+Anonymizer</u>**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/). This tool ensures the specific PatientID code system. 
+Even if you are already anonymizing data using your own methods, we strongly recommend using the EUCAIM tool. The main reasons are:
+- **Unique Patient ID Generation**: Lethe Anonymizer automatically assigns a hashed PatientID to each patient. This 32mechanism ensures that the PatientID remains unique across the entire EUCAIM ecosystem, preventing any ID collisions between different DHs. This hash is generated using two components: 
+  - The original Patient ID.
+  - The specific SiteID of the Data Holder.
+- **How to obtain your SiteID**: The SiteID is a required input for Lethe and can be retrieved from your User Profile in the EUCAIM Dashboard (UUID). To access this, you must log in with your institutional account, which must be properly registered in LS-AAI. You have to coordinate with your local IT department to ensure your institution is correctly integrated into the LS-AAI system. Google accounts or similar can’t be used to retrieve this SiteID.
+- **Synchronizing Clinical Data**. To ensure your clinical data matches the hashed PatientIDs generated for the DICOM images, you can provide a CSV file during the anonymization process. The only requirement is that the first column must be the original PatientID. Lethe will then output: 
+  - The anonymized DICOM images.
+  - A modified CSV file where the original IDs are replaced by the new hashed IDs.”
 
-- the patient ID linking clinical and imaging data must be identical and
+([<u>Figure
+7</u>](https://eucaim.gitbook.io/handbook/datapreparation#bookmark=kix.br72yai62sd4)). The use of [**<u>Lethe EUCAIM
+Anonymizer</u>**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/) requires:
+
+- The patient ID linking clinical and imaging data must be identical and
   listed as the first variable in the clinical dataset for tabular data;
 
 - Your raw imaging data are in DICOM format;
 
-- the tool requires as input the SITE_ID
+- The tool requires as input the SITE_ID
   (**<u>[Figure](https://eucaim.gitbook.io/handbook/datapreparation#fig_dataanon)</u>
   9**), the unique identifier of the data provider, which is you can see
   in your user profile from the [<u>EUCAIM
