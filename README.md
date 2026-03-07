@@ -18,7 +18,7 @@ All intellectual property rights are owned by the consortium of EUCAIM under ter
 
 **Data Holders EUCAIM Federation Handbook**
 
-**Version:                 	0.8**
+**Version:                 	1.0**
 
 Table of contents
 
