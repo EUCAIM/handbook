@@ -8,7 +8,7 @@ EUCAIM has set up two reference nodes to host data transferred from the data hol
 
 - The Euro-BioImaging Medical Imaging Repository ([https://xnat.health-ri.nl](https://xnat.health-ri.nl)) is a platform operated by Health-RI ([https://www.health-ri.nl/en/services/xnat](https://www.health-ri.nl/en/services/xnat)) for storing and managing imaging provided as a service through the Euro-BioImaging ERIC. XNAT is an extensible open-source imaging platform that simplifies common tasks in imaging data management. The Imaging Data should be stored in DICOM format if that is available, but can be also stored in other formats like NIfTI, and derived data and clinical data can also be stored in appropriate file formats (CSV or JSON).
 
-Details on the features supported by each Reference node are provided in D5.6, section 4.3.3. All communications are performed using encrypted protocols (TLS 1.3).
+Details on the features supported by each Reference node are provided in [D5.6, section 4.3.3](https://cancerimage.eu/wp-content/uploads/2026/02/D5.6.-Minimum-Data-Federation-and-Interoperability-Framework.pdf). All communications are performed using encrypted protocols (TLS 1.3).
 
 ## 6.2. Transferring data to the nodes {#6.2.-transferring-data-to-the-nodes}
 
