@@ -312,7 +312,7 @@ This section summarises in a comprehensive table all the actions to be performed
         Provide the metadata of the datasets according to the EUCAIM schema. In case of doubts with the terminology, use textual descriptions.
       </td>
       <td>
-        <a href="#">EUCAIM Dataset metadata</a> or <a href="#">Molgenis excel template</a>
+        <a href="https://docs.google.com/spreadsheets/d/1cj6YzIAchHnEKlH612gO91WzHfEOB4TbwBrl9a0kgE0/edit?gid=0#gid=0">EUCAIM Dataset metadata</a> or <a href="#">Molgenis excel template</a>
       </td>
     </tr>
     <tr>
