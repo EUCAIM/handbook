@@ -1,4 +1,4 @@
-# 1\. Introduction {#1.-introduction}
+# 1. Introduction
 
 This handbook is designed to guide **Data Holders** through the onboarding process for sharing or transferring data to the EUCAIM infrastructure. It outlines the roles, responsibilities, legal and technical requirements, and procedural steps to ensure compliance and facilitate smooth integration into the EUCAIM Federation.
 
