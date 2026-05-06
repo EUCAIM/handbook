@@ -1,13 +1,13 @@
-# 4\. Support and communication  {#4.-support-and-communication}
+# 4. Support and communication
 
-## 4.1. Engagement Team {#4.1.-engagement-team}
+## 4.1. Engagement Team
 
 As the first line of support for Data Holders, the **Engagement Team** will reach out to them to start the Onboarding process to the EUCAIM Federation. 
 - The __Engagement Team Coordinator__ will focus on coordinating the relationships with the Data Holders by providing them with the information and resources that will guide them through each step of the onboarding process as well as collecting information from their centre’s current situation. 
 - Each DH’s DPO will be contacted by the __Engagement Team’s legal support team__ directly to address the legal requirements.
 DH’s will also be assigned with one of the __Engagement Team’s technicians__ that will support them in any technical matter, but this will be mainly addressed also via the  - Helpdesk which will be explained as follows.
 
-## 4.2. Helpdesk {#4.2.-helpdesk}
+## 4.2. Helpdesk
 
 The information on the usage of the platform is available in different sources:
 
@@ -21,7 +21,10 @@ The information on the usage of the platform is available in different sources:
 
 - The HelpDesk, for requesting support when facing issues or when direct interaction is required (e.g. for requesting the uploading data, registering a dataset, etc.).
 
-![Figure 4](figures/image4.png) Figure 4: Sources of information for Data Holders
+### <a id="fig_support"></a>
+![Figure 4: Sources of information for Data Holders.](figures/image4.png)
+
+### <a id="table_document"></a> 
 
 | Support source | Purpose | Link (s) |
 | :---- | :---- | :---- |
@@ -43,7 +46,8 @@ You may contact the Helpdesk via two paths:
 
 The issue will be addressed within 48 hours, and the data holder will receive an answer by email as well as in the helpdesk interface.
 
-### **4.3. EUCAIM training platform: Overview of courses and access**  {#4.1.1.-eucaim-training-platform:-overview-of-courses-and-access}
+## 4.3. EUCAIM training platform: Overview of courses and access  
 
-![Figure 5](figures/image5.png)
-Figure 5: Schema of the training modules
+### <a id="fig_training"></a> 
+![Figure 5: Schema of the training modules.](figures/image5.png)
+

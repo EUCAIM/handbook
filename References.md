@@ -11,7 +11,7 @@
 
 \[5\] Registration of users in EUCAIM LS-AAI. [https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) 
 
-\[6\] EUCAIM Dashboard Manual. [https://eucaim.gitbook.io/eucaim-dashboard](https://eucaim.gitbook.io/eucaim-dashboard) 
+\[6\] EUCAIM Dashboard Page. [https://dashboard.eucaim.cancerimage.eu/documentation](https://dashboard.eucaim.cancerimage.eu/documentation) 
 
 \[7\] End user Guide of the Platform Services for the different profiles [https://eucaim.gitbook.io/end-user-guide](https://eucaim.gitbook.io/end-user-guide)  
 
