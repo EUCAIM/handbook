@@ -104,7 +104,7 @@ them. The data preparation processes might slightly require different
 tools depending on their specific requirements and intended tier level.
 Please read the sections below carefully. EUCAIM
 technical support team can assist you
-throughout this process via the Helpdesk.
+throughout this process via the [Helpdesk](https://help.cancerimage.eu/).
 
 ### <a id="fig_datatools"></a>
 |    |    |
@@ -129,22 +129,19 @@ Data holders can get information about the data preparation tools
 ([<u>https://bio.tools/t?domain=eucaim</u>](https://bio.tools/t?domain=eucaim)).
 The binaries of the tools can be downloaded from:
 
-- the EUCAIM Software artifacts registry, the EUCAIM harbor
+- the EUCAIM Software artifacts registry (the EUCAIM harbor), usually for container images
+- the EUCAIM drive repository, usually for non-containerized tools
 
-- the EUCAIM drive repository
+The access to both (artifacts registry and drive) requires a valid account and additional
+permissions that can be requested on the first access
+(only data holders and project members can download the tools).
 
 #### Access to the EUCAIM Software artifacts registry (Harbor)
 
 ([https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories))
 
-The access to the registry requires a valid account and additional
-permissions that can be requested on the first access to the registry. Instructions on how to request access and download tools are available [here](https://drive.eucaim.cancerimage.eu/s/pxpTJWSTFsLbqPQ?dir=/&editing=false&openfile=true).
-
-It is advisable that once data holders request access to the registry, they open a ticket in the EUCAIM
-helpdesk  - in the enrollment group - to speed up the process of approval
-(only data holders and project members can download the tools).
-Below is a step-by-step guide on how to access
-the Harbor repository and download the required tools.
+Instructions on how to request access and download tools are available 
+[here](https://drive.eucaim.cancerimage.eu/s/pxpTJWSTFsLbqPQ?dir=/&editing=false&openfile=true).
 
 #### Access to the EUCAIM drive repository
 
@@ -154,9 +151,9 @@ the Harbor repository and download the required tools.
 
 ### **Steps to prepare your Tier 1 dataset for transfer to a reference node**
 
-The preparation of your dataset will follow four steps – image
-annotation (optional), de-identification, data quality check, and data
-transfer – as described below:
+The preparation of your dataset will follow four steps: 
+image annotation (optional), de-identification, data quality check, and data transfer.
+They are described below.
 
 ![Figure 8. Step-wise preparation of Tier 1 dataset to be transferred to a reference node.](figures/step-prep-Tier1.png)
 
@@ -166,7 +163,7 @@ transfer – as described below:
 You may want to annotate your imaging data to enrich the quality of your
 dataset.
 
-Tools: We recommend using the [**<u>MITK (Medical Imaging Interaction Toolkit) Workbench</u>**](https://bio.tools/mitk), which ensures the output
+**Tools:** We recommend using the [**<u>MITK (Medical Imaging Interaction Toolkit) Workbench</u>**](https://bio.tools/mitk), which ensures the output
 format will be in the required format to be compliant with EUCAIM. Using
 it would avoid the burden (and the risk) of additional conversion
 procedures. Data can be also annotated using the DICOM Viewers from
@@ -176,7 +173,7 @@ reference node environments after transferring the data.
 imaging raw data are in DICOM format, and that your annotations are in
 DICOM-SEG.
 
-Tools: If you have existing annotation files
+**Tools:** If you have existing annotation files
 that are not in DICOM-SEG, you may use the EUCAIM [**<u>Annotation Seg
 converter</u>**](https://hub.docker.com/r/mariov687/dicomseg) tool to
 convert them.
@@ -184,17 +181,16 @@ convert them.
 #### **Step 2: De-identification**
 
 You must ensure that no identifiable information (direct or indirect) is
-present in the dataset you will share ([Figure 9](#fig_dataanon)).
+present in the dataset you will share.
 
-***Important points to consider before
-de-identification***
+***Important points to consider before de-identification***
 
 If your Tier 1 dataset is not originally anonymized we recommend
 preparing a tabular file associating StudyUIDs from DICOM images with
 corresponding clinical “episode” and “timepoint events”, in case the
 dataset contains multiple episode/timepoints.
 
-Tools: This can be done using the [**<u>DICOM tags extractor</u>**](https://bio.tools/dicom_tags_extractor) tool
+**Tools:** This can be done using the [**<u>DICOM tags extractor</u>**](https://bio.tools/dicom_tags_extractor) tool
 ([Figure 7](#fig_datatools)). For more information, see further below section
 [Step 2](#step-2-imaging-correspondence-with-clinical-data)  on imaging data
 preparation.
@@ -208,22 +204,23 @@ If your imaging data are not already de-identified, you may use the
 
 - your raw imaging data are in DICOM format;
 
-- the tool requires as input the SITE_ID, the unique identifier of the
+- the tool requires as input the SITE ID, the unique identifier of the
   data provider, which you can see in your user profile from the
   [<u>EUCAIM Dashboard</u>](https://dashboard.eucaim.cancerimage.eu/)
   ([Figure 9](#fig_dataanon)). In case your Life Science account is not
   assigned to a known organization, then this will be empty and so you
-  can create a ticket in the Helpdesk to request one;
+  can create a [Helpdesk](https://help.cancerimage.eu/) ticket in the 
+  group of "dashboard" to request one.
 
 Special attention must be given to **embedded text** in images, which
 may contain patient-identifiable information, as well as **craniofacial
 images** that pose a risk of patient re-identification. You may need to
 apply additional de-identification techniques to mitigate this risk.
 
-Tools: Tools such as the [**<u>DICOM defacing anonymisation</u>**](https://bio.tools/dicom_defacing_anonymation) tool
+**Tools:** the [**<u>DICOM defacing anonymisation</u>**](https://bio.tools/dicom_defacing_anonymation) tool
 from the EUCAIM catalogue ([Figure 7](#fig_datatools)) may be used to remove facial
-features from your DICOM images. For 2D ultrasounds and mammography
-**dataset**, you may use the [**<u>Trace4MedicalImage cleaning</u>**](https://bio.tools/trace4medicalimagecleaning) tool, that
+features from your DICOM images. For 2D ultrasounds and mammography, 
+you may use the [**<u>Trace4MedicalImage cleaning</u>**](https://bio.tools/trace4medicalimagecleaning) tool, that
 detects and removes encapsulated text in DICOM files. [<u>The Lethe EUCAIM Anonymizer</u>](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer)
 tool also provides options to remove burned-in PHI pixel data from the
 images.
@@ -233,7 +230,7 @@ re-identification risk analysis on a combination of clinical and imaging
 metadata is possible at this Tier, you should carefully assess that no
 direct or indirect identifiers are present in your data.
 
-Tools: For assessing the risk of
+**Tools:** For assessing the risk of
 re-identification of patients based on your **imaging metadata** before
 sharing your dataset, you may use the [<u>EUCAIM</u> **<u>Wizard
 tool</u>**](https://bio.tools/eucaim_wizard_tool). Extraction of imaging
@@ -269,7 +266,7 @@ dataset is**:
 You may use dedicated tools to assess the degree of compliance of your
 dataset to these principles.
 
-Tools: Some tools from the EUCAIM catalogue
+**Tools:** Some tools from the EUCAIM catalogue
 can help you to assess the degree of compliance of your dataset to each
 EUCAIM DQ dimension:
 
@@ -345,8 +342,11 @@ for:
 
 ### **Steps to prepare your Tier 2 or Tier 3 dataset to follow the EUCAIM CDM**
 
-The preparation of your dataset will follow the 7 steps as described
-above:
+The preparation of your dataset will follow 7 steps: 
+clinical data structuring, imaging correspondence with clinical data, image annotation (optional),
+de-identification, data quality assessment, data conversion to EUCAIM Common Data Model, 
+and Data transfer (optional).
+They are described below.
 
 ![Figure 10. Steps recommended to prepare your Tier 2 or Tier 3 ](figures/step-prep-Tier2-3.png)
 
@@ -517,7 +517,7 @@ the DICOM tags extraction tool to provide the file, proceed with step 2
 and skip step 3. It is important that you can still link the
 (anonymized) PatientID with the episodes and timepoints.
 
-Tools: To assist you retrieving all PatientID
+**Tools:** To assist you retrieving all PatientID
 and StudyUID from your imaging dataset, you may use the [**<u>DICOM tags extractor tool</u>**](https://bio.tools/dicom_tags_extractor) and its
 “dicom_tags_selection” script. A template csv input file called
 “imaging_studies_episodes.csv”, provided with the tool, allows to
@@ -562,7 +562,7 @@ You then need to edit the output file by adding the “Episode” and
 and both Episode and Timepoint. The part in blue corresponds to the
 part edited manually by the data holder.
 
-#### **Step 3: image annotation (optional)**
+#### **Step 3: Image annotation (optional)**
 
 You may want to annotate your imaging data to enrich your dataset. We
 recommend using the [**<u>MITK (Medical Imaging Interaction Toolkit) Workbench</u>**](https://bio.tools/mitk) that ensures the output format
@@ -579,30 +579,36 @@ convert them.
 #### **Step 4: De-identification**
 
 You must ensure that no identifiable information (direct or indirect) is
-present in the dataset you will share ([Figure 9](#fig_dataanon)).
+present in the dataset you will share.
 
-The official tool for de-identification in EUCAIM is [**<u>Lethe EUCAIM Anonymizer</u>**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/). This tool ensures the specific PatientID code system. 
+The official tool for de-identification in EUCAIM is [**<u>Lethe EUCAIM Anonymizer</u>**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/). 
+This tool ensures the specific PatientID code system. 
 Even if you are already anonymizing data using your own methods, we strongly recommend using the EUCAIM tool. The main reasons are:
-- **Unique Patient ID Generation**: Lethe Anonymizer automatically assigns a hashed PatientID to each patient. This 32mechanism ensures that the PatientID remains unique across the entire EUCAIM ecosystem, preventing any ID collisions between different DHs. This hash is generated using two components: 
+- **Unique Patient ID Generation**: Lethe Anonymizer automatically assigns a hashed PatientID to each patient. 
+  This mechanism ensures that the PatientID remains unique across the entire EUCAIM ecosystem, preventing any ID collisions between different DHs. 
+  This hash is generated using two components: 
   - The original Patient ID.
-  - The specific SiteID of the Data Holder.
-- **How to obtain your SiteID**: The SiteID is a required input for Lethe and can be retrieved from your User Profile in the EUCAIM Dashboard (UUID). To access this, you must log in with your institutional account, which must be properly registered in LS-AAI. You have to coordinate with your local IT department to ensure your institution is correctly integrated into the LS-AAI system. Google accounts or similar can’t be used to retrieve this SiteID.
-- **Synchronizing Clinical Data**. To ensure your clinical data matches the hashed PatientIDs generated for the DICOM images, you can provide a CSV file during the anonymization process. The only requirement is that the first column must be the original PatientID. Lthe will then output: 
+  - The specific SITE ID of the Data Holder.
+- **Synchronizing Clinical Data**. To ensure your clinical data matches the hashed PatientIDs generated for the DICOM images, you can provide a CSV file during the anonymization process. 
+  The only requirement is that the first column must be the original PatientID. 
+  Lethe will then output: 
   - The anonymized DICOM images.
-  - A modified CSV file where the original IDs are replaced by the new hashed IDs.”
+  - A modified CSV file where the original IDs are replaced by the new hashed IDs.
 
-([Figure 7](#fig_datatools)). The use of [**<u>Lethe EUCAIM Anonymizer</u>**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/) requires:
+The use of [**<u>Lethe EUCAIM Anonymizer</u>**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/) requires:
 
-- The patient ID linking clinical and imaging data must be identical and
-  listed as the first variable in the clinical dataset for tabular 
-- Your raw imaging data are in DICOM format;
+- the patient ID linking clinical and imaging data must be identical and
+  listed as the first variable in the clinical dataset for tabular data;
 
-- The tool requires as input the SITE_ID
-  ([Figure 9](#fig_dataanon)), the unique identifier of the data provider, which is you can see
-  in your user profile from the [<u>EUCAIM Dashboard</u>](https://dashboard.eucaim.cancerimage.eu/). In case your
-  Life Science account is not assigned to a known organization, then
-  this will be empty and so you can create a ticket in the Helpdesk to
-  request one;
+- your raw imaging data are in DICOM format;
+
+- the tool requires as input the SITE ID, the unique identifier of the
+  data provider, which you can see in your user profile from the
+  [<u>EUCAIM Dashboard</u>](https://dashboard.eucaim.cancerimage.eu/)
+  ([Figure 9](#fig_dataanon)). In case your Life Science account is not
+  assigned to a known organization, then this will be empty and so you
+  can create a [Helpdesk](https://help.cancerimage.eu/) ticket in the 
+  group of "dashboard" to request one.
 
 Special attention should be given to **embedded text** in images, that
 may contain patient-identifiable information, as well as **skull and
@@ -610,7 +616,7 @@ head images** that pose a risk of patient re-identification. You may
 need to apply additional de-identification techniques to mitigate this
 risk.
 
-Tools: Tools such as the [**<u>DICOM defacing anonymisation</u>**](https://bio.tools/dicom_defacing_anonymation) tool
+**Tools:** Tools such as the [**<u>DICOM defacing anonymisation</u>**](https://bio.tools/dicom_defacing_anonymation) tool
 from the EUCAIM catalogue ([Figure 7](#fig_datatools)) may be used to remove facial
 features from your DICOM images. For 2D ultrasounds and mammography
 **dataset**, you may use the [**<u>Trace4MedicalImage cleaning</u>**](https://bio.tools/trace4medicalimagecleaning) tool, that
@@ -622,7 +628,7 @@ images.
 (optional)**: Before sharing your dataset, you should carefully assess
 that no direct or indirect identifiers are present in your data.
 
-Tools: Extraction of imaging metadata to feed
+**Tools:** Extraction of imaging metadata to feed
 the wizard tool is possible by using the [**<u>DICOM tags extractor</u>**](https://bio.tools/dicom_tags_extractor) tool (
 [Figure 7](#fig_datatools)).
 Based on the EUCAIM CDM structure, ready-to-use hierarchies can be
@@ -637,8 +643,6 @@ optimizing the available information for security and usability for
 clinical and imaging information independently will work cumulatively
 for the overall data value.
 
-You must ensure that no identifiable information (direct or indirect) is
-present in the dataset you will share ([Figure 9](#fig_dataanon)).
 
 #### **Step 5: Data quality assessment**
 
@@ -657,7 +661,7 @@ dataset is**:
 
 - **Showing integrity**: absence of data value loss or corruption
 
-Tools: You may use dedicated tools to assess
+**Tools:** You may use dedicated tools to assess
 the degree of compliance of your dataset to these principles. Some tools
 from the EUCAIM catalogue can help you to do so:
 
@@ -714,8 +718,7 @@ For your imaging dataset:
 >
 > Finally, share the **two above-mentioned csv files** as well as the
 > **file from step 2 on PatientID/StudyUID correspondence** with the ETL
-> ingestion support team through the [<u>EUCAIM
-> helpdesk</u>](https://help.cancerimage.eu/).
+> ingestion support team through the [EUCAIM Helpdesk](https://help.cancerimage.eu/).
 
 ### <a id="tab_correspond_series"></a>
 | **Source series Description**         | **EUCAIM series description** |
@@ -763,8 +766,8 @@ below describes the steps to register your metadata.
 ### <a id="tab_steps_meta_reg"></a> 
 | Action | Description | Support |
 | -------- | -------- | -------- |
-| Provide the dataset's metadata in the spreadsheet template (Data Holder Template sheet) | The dataset schema can be downloaded from this [link](https://docs.google.com/spreadsheets/d/1cj6YzIAchHnEKlH612gO91WzHfEOB4TbwBrl9a0kgE0/edit?usp=sharing). In case of doubts with the terminology, use textual descriptions. | A helpdesk ticket on the category of catalogue. |
-| Make a request of registry upload | Create a helpdesk ticket on the category catalogue, providing the spreadsheet file with the metadata information. The helpdesk team will contact you back informing if the dataset has been properly registered or requesting more information. | Same procedure |
+| Provide the dataset's metadata in the spreadsheet template (Data Holder Template sheet) | The dataset schema can be downloaded from this [link](https://docs.google.com/spreadsheets/d/1cj6YzIAchHnEKlH612gO91WzHfEOB4TbwBrl9a0kgE0/edit?usp=sharing). In case of doubts with the terminology, use textual descriptions. | If there is any other doubt a [helpdesk](https://help.cancerimage.eu/) ticket can be created on the group of "catalogue". |
+| Make a request of registry upload | Create a [helpdesk](https://help.cancerimage.eu/) ticket on the group "catalogue", providing the spreadsheet file with the metadata information. The helpdesk team will contact you back informing if the dataset has been properly registered or requesting more information. | Same procedure |
 | Verify the entries in the catalogue | Access the registry in the catalogue at the URL: https://catalogue.eucaim.cancerimage.eu/#/collection/ | Same procedure | 
 
 [Table 7](#tab_steps_meta_reg): Steps to submit the Metadata to the registry.
