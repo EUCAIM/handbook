@@ -345,7 +345,7 @@ They are described below.
 In order to have interoperable data that can be queried and processed,
 we need you to provide us with information on your dataset structure
 using another tabular template file
-([EUCAIM_example_file_patients_datasets_CDM_v6](https://docs.google.com/spreadsheets/d/1zAReu8-40cAdH8Z7jH3kaHyYkrCILd2X/edit?usp=drive_link&ouid=105979482259582415027&rtpof=true&sd=true))
+([EUCAIM_example_file_patients_datasets_CDM_v7](https://docs.google.com/spreadsheets/d/1ZYm9g7xCvRE65taMP-kvB57VbT16x9n3/edit?gid=1589152533#gid=1589152533))
 *in addition to* your source dataset.
 
 **How the tabular template file is organized:**
