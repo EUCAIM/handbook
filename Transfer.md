@@ -86,14 +86,14 @@ NOTE: if you decide to convert the data through the **ETL** application inside t
 After selecting **upload of clinical data** select the target project. Then, upload the file containing the clinical data. Both Excel and CSV formats are supported. Please ensure that **the first column is labeled PatientID** and the values in this column **match the DICOM PatientID tag** (0010, 0020) of your image data. This will ensure your clinical data is correctly linked to the image data. As with image uploads, any errors will generate a downloadable tabular report. 
 
 
-![Figure 6.5. Upload of clinical data. (Left) Select the patients which clinical data you want to update. (Right) Upload status.](figures/image6-5.avif)
+![Figure 6.5. Upload of clinical data. (Left) Select the patients which clinical data you want to update. (Right) Upload status.](figures/image6-5.png)
 
 
 **Accessing Uploaded Data** 
 
 Once uploaded, the exams can be accessed through the QP-Insights platform at: https://qpinsights.eucaim-node.i3m.upv.es/cases/subjects. Uploaded images can be viewed using the integrated **DICOM Viewer**. The DICOM Viewer **supports the annotation of data** in the reference node, offering tools to extract ROI measurements and generate segmentation masks. Annotations can be created **manually from scratch or semi-automatically**. In the latter case, AI tools can be executed to produce preliminary annotations that clinicians can then refine and correct, thereby accelerating the annotation workflow. 
 
-![Figure 6.6. (Left) Uploaded subjects view in the QP-Insights platform. (Right) Integrated DICOM Viewer.  ](figures/image6-6.avif)
+![Figure 6.6. (Left) Uploaded subjects view in the QP-Insights platform. (Right) Integrated DICOM Viewer.](figures/image6-6.avif)
 
 
 #### 6.2.2.2. Case-by-case upload via QP-Insights Web Interface
@@ -102,22 +102,22 @@ To upload data using the web interface (no installation required), access https:
 
 To begin importing a new imaging exam, click the “Import exam” icon located in the upper-right corner of the workspace.
 
-![Figure 6.7. (Left) To import a new imaging exam, click on the icon “Import exam” in the upper right corner of the workspace. ](figures/image6-7.avif)
+![Figure 6.7. (Left) To import a new imaging exam, click on the icon “Import exam” in the upper right corner of the workspace.](figures/image6-7.avif)
 
 You will be prompted to select the project in which you want to upload the exam. Next, choose the subject from the drop-down list.
 If the subject does not yet exist, type the desired subject name. A button will appear to the right of the search field allowing you to create the new subject when no match is found.
 After that, select the appropriate timepoint from the drop-down menu.
 
-![Figure 6.8. (Left) Project selection. (Center) Subject selection. (Right) Timepoint selection. ](figures/image6-8.avif)
+![Figure 6.8. (Left) Project selection. (Center) Subject selection. (Right) Timepoint selection.](figures/image6-8.avif)
 
 To add imaging data, click inside the upload box to browse for your DICOM files or drag and drop them directly into the window.
 Once selected, the interface will display the list of exams identified in the upload. All series are automatically checked for upload, but you may deselect any series you do not wish to include by unticking the corresponding boxes in the "Included" column.
 
-![Figure 6.9. (Left) Add exam menu. (Right) List of exams loaded.  ](figures/image6-9.avif)
+![Figure 6.9. (Left) Add exam menu. (Right) List of exams loaded.](figures/image6-9.avif)
 
 During the upload, you will see live progress updates. When the process completes, a summary of the import results will appear. Select “Go to Cases” to close the summary and return to the Cases view.
 
-![Figure 6.10. (Left) Upload progress. (Right) Summary of the exam import process. ](figures/image6-10.avif)
+![Figure 6.10. (Left) Upload progress. (Right) Summary of the exam import process.](figures/image6-10.avif)
 
 If your project includes an electronic Case Report Form (eCRF), you can fill it out manually for each subject. Open the eCRF by clicking the file icon in the Cases view. An eCRF template must be uploaded for the project beforehand. The form will then be displayed and can be completed directly within the interface.
 
