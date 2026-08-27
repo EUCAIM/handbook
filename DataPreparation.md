@@ -150,15 +150,26 @@ If your Tier 1 dataset is not originally anonymized we recommend preparing a tab
 
 **Tools:** This can be done using the [**DICOM tags extractor**](https://bio.tools/dicom_tags_extractor) tool ([Figure 7](DataPreparation.md#fig_datatools)). For more information, see further below section [Step 2](DataPreparation.md#step-2-imaging-correspondence-with-clinical-data) on imaging data preparation.
 
-If your imaging data are not already de-identified, you may use the [**Lethe EUCAIM Anonymizer**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/) ([Figure 7](DataPreparation.md#fig_datatools)). In this case, you must ensure the following:
+If your imaging data are not already de-identified, you may use the [**Lethe DICOM Anonymizer**](https://bio.tools/lethe_dicom_anonymizer) ([Figure 7](DataPreparation.md#fig_datatools)).
+However, even if your dataset has already been anonymized using your own methods, we strongly recommend using the Lethe DICOM Anonymizer, which is the official de-identification tool in EUCAIM. The main reasons are the following:
+- **Unique Patient ID Generation**: Lethe DICOM Anonymizer automatically assigns a hashed PatientID to each patient. This mechanism ensures that the PatientID remains unique across the entire EUCAIM ecosystem, preventing any ID collisions between different DHs. This hash is generated using two components: 
+  - The original Patient ID.
+  - The specific SiteID of the Data Holder.
+- **Synchronizing Clinical Data**. To ensure your clinical data matches the hashed PatientIDs generated for the DICOM images, you can provide a CSV file during the anonymization process. The only requirement is that the first column must be the original PatientID. Lethe will then output: 
+  - The anonymized DICOM images.
+  - A modified CSV file where the original IDs are replaced by the new hashed IDs.
 
-* the patient ID linking clinical and imaging data must be identical and listed as the first variable in the clinical dataset for tabular data;
-* your raw imaging data are in DICOM format;
-* the tool requires as input the SITE ID, the unique identifier of the data provider, which you can see in your user profile from the [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/) ([Figure 9](DataPreparation.md#fig_dataanon)). In case your Life Science account is not assigned to a known organization, then this will be empty and so you can create a [Helpdesk](https://help.cancerimage.eu/) ticket in the group of “Dashboard” to request one.
+The use of the [Lethe DICOM Anonymizer](https://bio.tools/lethe_dicom_anonymizer) requires:
+
+* The patient ID linking clinical and imaging data must be identical and listed as the first variable in the clinical dataset for tabular data.
+* Your raw imaging data are in DICOM format.
+* The tool requires as input the SITE ID, the unique identifier of the data holder, which you can see in your user profile from the [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/) ([Figure 9](DataPreparation.md#fig_dataanon)). In case your Life Science account is not assigned to a known organization, then this will be empty and so you can create a [Helpdesk](https://help.cancerimage.eu/) ticket in the group of “Dashboard” to request one.
+
+While using the Lethe DICOM Anonymizer tool is not mandatory, we strongly recommend its use to ensure secure and unique hashed PatientIDs within the EUCAIM infrastructure.
 
 Special attention must be given to **embedded text** in images, which may contain patient-identifiable information, as well as **craniofacial images** that pose a risk of patient re-identification. You may need to apply additional de-identification techniques to mitigate this risk.
 
-**Tools:** the [**DICOM defacing anonymisation**](https://bio.tools/dicom_defacing_anonymation) tool from the EUCAIM catalogue ([Figure 7](DataPreparation.md#fig_datatools)) may be used to remove facial features from your DICOM images. [The Lethe EUCAIM Anonymizer](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer) tool also provides options to remove burned-in PHI pixel data from the images.
+**Tools:** the [**DICOM defacing anonymisation**](https://bio.tools/dicom_defacing_anonymation) tool from the EUCAIM catalogue ([Figure 7](DataPreparation.md#fig_datatools)) may be used to remove facial features from your DICOM images. The [Lethe DICOM Anonymizer](https://bio.tools/lethe_dicom_anonymizer) tool also provides options to remove burned-in PHI pixel data from the images.
 
 **Re-identification risk assessment (optional)**: Even if no automatic re-identification risk analysis on a combination of clinical and imaging metadata is possible at this Tier, you should carefully assess that no direct or indirect identifiers are present in your data.
 
@@ -193,12 +204,12 @@ Tier 1 datasets can either be transferred to a reference node, or remain at your
 
 ### **EUCAIM Common Data Model and Hyperontology**
 
-The [**EUCAIM Common Data Model**](https://eucaim.gitbook.io/eucaim-common-data-model/1.-introduction) defines a standardized structure for representing clinical and imaging metadata across the EUCAIM platform. It ensures that data contributed by different partners can be understood and used in a consistent way.
+The **EUCAIM Common Data Model** defines a standardized structure for representing clinical and imaging metadata across the EUCAIM platform. It ensures that data contributed by different partners can be understood and used in a consistent way.
 
 **Key features:**
 
 * It is based on the conceptual model of [mCode specification](https://ascopubs.org/doi/10.1200/CCI.20.00059)
-* The current version of the EUCAIM CDM Data Dictionary is available [here](https://docs.google.com/spreadsheets/d/1ox9PdvfCDxpDmEnFzC1M6OFhUhXpjQzg/edit?usp=sharing\&ouid=115998150174651530097\&rtpof=true\&sd=true).
+* The current version of the EUCAIM CDM Data Dictionary is available [here](https://eucaim-cdm.ics.forth.gr/).
 * Supports multimodal data (i.e. imaging and clinical).
 * Facilitates efficient querying, tool compatibility, and federated analysis and learning.
 
@@ -336,24 +347,27 @@ Your imaging raw data must be in DICOM and your annotations in DICOM-SEG format.
 
 You must ensure that no identifiable information (direct or indirect) is present in the dataset you will share.
 
-The official tool for de-identification in EUCAIM is [**Lethe EUCAIM Anonymizer**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/). This tool ensures the specific PatientID code system. Even if you are already anonymizing data using your own methods, we strongly recommend using the EUCAIM tool. The main reasons are:
+If your imaging data are not already de-identified, you may use the [**Lethe DICOM Anonymizer**](https://bio.tools/lethe_dicom_anonymizer). However, even if your dataset has already been anonymized using your own methods, we strongly recommend using the Lethe DICOM Anonymizer, which is the official de-identification tool in EUCAIM. The main reasons are the following:
 
-* **Unique Patient ID Generation**: Lethe Anonymizer automatically assigns a hashed PatientID to each patient. This mechanism ensures that the PatientID remains unique across the entire EUCAIM ecosystem, preventing any ID collisions between different DHs. This hash is generated using two components:
+* **Unique Patient ID Generation**: Lethe DICOM Anonymizer automatically assigns a hashed PatientID to each patient. This mechanism ensures that the PatientID remains unique across the entire EUCAIM ecosystem, preventing any ID collisions between different DHs. This hash is generated using two components:
   * The original Patient ID.
   * The specific SITE ID of the Data Holder.
 * **Synchronizing Clinical Data**. To ensure your clinical data matches the hashed PatientIDs generated for the DICOM images, you can provide a CSV file during the anonymization process. The only requirement is that the first column must be the original PatientID. Lethe will then output:
   * The anonymized DICOM images.
   * A modified CSV file where the original IDs are replaced by the new hashed IDs.
 
-The use of [**Lethe EUCAIM Anonymizer**](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer/) requires:
+The use of [**Lethe DICOM Anonymizer**](https://bio.tools/lethe_dicom_anonymizer) requires:
 
 * the patient ID linking clinical and imaging data must be identical and listed as the first variable in the clinical dataset for tabular data;
 * your raw imaging data are in DICOM format;
-* the tool requires as input the SITE ID, the unique identifier of the data provider, which you can see in your user profile from the [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/) ([Figure 9](DataPreparation.md#fig_dataanon)). In case your Life Science account is not assigned to a known organization, then this will be empty and so you can create a [Helpdesk](https://help.cancerimage.eu/) ticket in the group of “Dashboard” to request one.
+* the tool requires as input the SITE ID, the unique identifier of the data holder, which you can see in your user profile from the [EUCAIM Dashboard](https://dashboard.eucaim.cancerimage.eu/) ([Figure 9](DataPreparation.md#fig_dataanon)). In case your Life Science account is not assigned to a known organization, then this will be empty and so you can create a [Helpdesk](https://help.cancerimage.eu/) ticket in the group of “Dashboard” to request one.
+
+While using the Lethe DICOM Anonymizer tool is not mandatory, we strongly recommend its use to ensure secure and unique hashed PatientIDs within the EUCAIM infrastructure.
+
 
 Special attention should be given to **embedded text** in images, that may contain patient-identifiable information, as well as **skull and head images** that pose a risk of patient re-identification. You may need to apply additional de-identification techniques to mitigate this risk.
 
-**Tools:** Tools such as the [**DICOM defacing anonymisation**](https://bio.tools/dicom_defacing_anonymation) tool from the EUCAIM catalogue ([Figure 7](DataPreparation.md#fig_datatools)) may be used to remove facial features from your DICOM images. [The Lethe EUCAIM Anonymizer](https://harbor.eucaim.cancerimage.eu/harbor/projects/3/repositories/lethe-dicom-anonymizer) tool also provides options to remove burned-in PHI pixel data from the images.
+**Tools:** Tools such as the [**DICOM defacing anonymisation**](https://bio.tools/dicom_defacing_anonymation) tool from the EUCAIM catalogue ([Figure 7](DataPreparation.md#fig_datatools)) may be used to remove facial features from your DICOM images. The [Lethe DICOM Anonymizer](https://bio.tools/lethe_dicom_anonymizer) tool also provides options to remove burned-in PHI pixel data from the images.
 
 **Re-identification risk assessment for imaging and clinical data (optional)**: Before sharing your dataset, you should carefully assess that no direct or indirect identifiers are present in your data.
 
@@ -372,7 +386,7 @@ Special attention should be given to **embedded text** in images, that may conta
 **Tools:** You may use dedicated tools to assess the degree of compliance of your dataset to these principles. Some tools from the EUCAIM catalogue can help you to do so:
 
 * The [**DICOM File integrity checker**](https://bio.tools/dicom_file_integrity_checker_by_gibi230) can check the **accuracy** and **integrity** of your imaging dataset.
-* **Uniqueness** can be addressed with two EUCAIM tools that search for image duplicates: the [**Image duplicates checker**](https://bio.tools/dicom_image_similarity-duplicate_checker), capable of detecting duplicate or visually similar DICOM series by that combining metadata analysis, hash-based comparison, and pixel-level similarity metrics; the [**Image duplicate check tool**](https://bio.tools/image_duplicate_check_tool), that detects duplicate DICOM images by analyzing pixel data.
+* **Uniqueness** can be addressed with two EUCAIM tools that search for image duplicates: the [**Image duplicates checker**](https://bio.tools/dicom_image_similarity-duplicate_checker), capable of detecting duplicate or visually similar DICOM series by combining metadata analysis, hash-based comparison, and pixel-level similarity metrics; the [**Image duplicate check tool**](https://bio.tools/image_duplicate_check_tool), that detects duplicate DICOM images by analyzing pixel data.
 * The [**DIQCT**](https://bio.tools/data_integration_quality_check_tool_diqct) may help you assess various aspects of your dataset’s quality, both for imaging and clinical data, such as its **completeness, uniqueness, validity, consistency, integrity.**
 
 #### **Step 6: Data conversion to EUCAIM Common Data Model**
