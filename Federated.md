@@ -13,26 +13,26 @@ Data holders who opt to host the data locally must set up a local node capable o
 
 ### &#x20;<a href="#tab_localnodespectwo" id="tab_localnodespectwo"></a>
 
-| Hardware               | Minimum                  |
-| ---------------------- | ------------------------ |
-| CPU                    | 4 Cores / 8 Threads      |
-| RAM                    | 32 GB                    |
-| Operating System Drive | 160+ GB SSD              |
-| Data Storage           | 1x (Dataset size)        |
+| Hardware                      | Minimum                  |
+| ----------------------------- | ------------------------ |
+| CPU                           | 4 cores / 8 threads      |
+| RAM                           | 32 GB                    |
+| Storage for OS and containers | 160+ GB SSD              |
+| Storage for data              | 1.2x (datasets size)     |
 
 [Table 7](Federated.md#tab_localnodespectwo): _Minimum hardware requirements for Tier 2 nodes._
 
 ### &#x20;<a href="#tab_localnodespecthree" id="tab_localnodespecthree"></a>
 
-| CPU | Minimum: 16 Cores \>=1.8GHZ or 12 Cores \>=3.0Ghz Recommended: 32 Cores / 64 Threads 3.0Ghz |
-| Hardware            | Minimum/Recommended                                                                                                    |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| CPU                 | Minimum: 16 Cores >=1.8GHZ or 12 Cores >=3.0Ghz <br/>Recommended: 32 Cores /64 Threads 3.0Ghz                          |
-| RAM                 | Minimum: 64GB <br/>Recommended: 128 GB ECC                                                                             |
-| Storage             | For Operating Sistem: 256 GB SSD <br/>Minimum for data: 1.2x(Dataset size) <br/>Recommended for data: 2x(Dataset size) |
-| GPU                 | Minimum: >150 Tensor Cores 16GB VRAM                                                                                   |
-| Motherboard         | 4+ RAM Slot                                                                                                            |
-| Internet connection | 100mbps (baseline) <br/>Each DH must make best efforts to provide the best possible connection to their Node. <br/>Network performance will directly affect node stability and can invalidate AI training. |
+| Hardware                      | Minimum/Recommended                                                                                                      |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| CPU                           | Minimum: 16 cores >=1.8GHZ or 12 cores >=3.0Ghz <br/>Recommended: 32 cores / 64 threads 3.0Ghz                           |
+| RAM                           | Minimum: 64GB <br/>Recommended: 128 GB ECC                                                                               |
+| Storage for OS and containers | 256 GB SSD                                                                                                               |
+| Storage for data              | Minimum: 1.2x (datasets size) <br/>Recommended: 2x (Datasets size)                                                       |
+| GPU                           | Minimum: >150 tensor cores 16GB VRAM                                                                                     |
+| Motherboard                   | 4+ RAM Slot                                                                                                              |
+| Internet connection           | 100mbps (baseline) <br/>Each DH must make best efforts to provide the best possible connection to their Node. <br/>Network performance will directly affect node stability and can invalidate AI training. |
 
 [Table 8](Federated.md#tab_localnodespecthree): _Minimum hardware requirements for Tier 3 nodes_
 
