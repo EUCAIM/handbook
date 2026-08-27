@@ -16,7 +16,7 @@ This section summarises in a comprehensive table all the actions to be performed
 
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
-| Provide documentation | <ul><li>Proof of legal representation and legal basis if necessary.</li><li>A copy of a favorable ethical approval (if applicable).</li><li>A report from the DPO confirming legal compliance.</li><li>GDPR compliance.</li><li>Data Protection Impact Assessment (DPIA), if applicable.</li><li>Evidence of an adequate anonymization/pseudonymization process that has been carried out</li><li>Documents demonstrating the security of the information system.</li><li>Any documents required under your national legislation.</li></ul> | - For more information see primarily the [Legal Handbook](https://docs.google.com/document/d/1U-RpFycjXEVP-4-l9ppveT654x78Dhlw/edit?tab=t.0), D4.4 [Final rules for participation report](https://drive.google.com/drive/folders/1dn1xQB9K7Fn3WzzqN5HRiQ7NiVwYt0yy) (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders)) <br>- Find also here the template for the DPO report: [faq_DPO_template.docx](https://docs.google.com/document/d/1KHf1nlCxFB1BjhhQXHVo4zVSoOBorL_X/edit) |
+| Provide documentation | <ul><li>Proof of legal representation and legal basis if necessary.</li><li>A copy of a favorable ethical approval (if applicable).</li><li>A report from the DPO confirming legal compliance.</li><li>GDPR compliance.</li><li>Data Protection Impact Assessment (DPIA), if applicable.</li><li>Evidence of an adequate anonymization/pseudonymization process that has been carried out</li><li>Documents demonstrating the security of the information system.</li><li>Any documents required under your national legislation.</li></ul> | - For more information see primarily the [Legal Handbook](https://drive.google.com/file/d/1rGXrK7Tmh2L2CV7Jz8wuh6auaoeFo7t5/view?usp=sharing), D4.4 [Final rules for participation report](https://drive.google.com/file/d/1QCAbv5nPpykos16-hmtKxFmb1h7YxP9B/view?usp=sharing) (See Sections 4.4.1 (Legal requirements) and 4.4.2 (Ethical requirements for Data Holders)) <br>- Find also here the template for the DPO report: [faq_DPO_template.docx](https://docs.google.com/document/d/1KHf1nlCxFB1BjhhQXHVo4zVSoOBorL_X/edit) |
 | Data Sharing Agreement | Fill-in and sign the DSA | - [DSA](https://drive.google.com/file/d/1-UyQ02w0-shmRgQgp8L1ATWs1JEco3_Y/view?usp=drive_link) | 
 | Define especial Access Conditions | A Document to be signed by the Data User that indicates the conditions under the Data User can access the data. | - [Draft Template](https://drive.google.com/file/d/1UMdDF52mXGHNIL0GegzfyuSBVfKCIl7d/view) |
 
@@ -35,7 +35,7 @@ This section summarises in a comprehensive table all the actions to be performed
 
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
-| Setup your local node | Deploy a node to host data and services to reach the desired interoperability level. | - Section 3.7 in [D5.6](https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d_fs/view?usp=sharing) |
+| Setup your local node | Deploy a node to host data and services to reach the desired interoperability level. | - Section 3.7 in [D5.6](https://cancerimage.eu/wp-content/uploads/2026/02/D5.6.-Minimum-Data-Federation-and-Interoperability-Framework.pdf) |
 | Set up of the local catalogue (optional) | Deployment of a local instance of the catalogue. | - [Gitlab repository](https://gitlab.com/radiology/infrastructure/studies/eucaim/molgenis-emx2-eucaim) |
 | Request a EUCAIM User | Request a EUCAIM User in the Dashboard. | - [Registration of users in EUCAIM](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) |
 
@@ -66,9 +66,9 @@ This section summarises in a comprehensive table all the actions to be performed
 
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
-| Definition of Mapping to CDM Template (optional) | A mapping template of the mandatory and other significant attributes to the CDM should be defined. | Tables 14 and 15 in [D5.6](https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d_fs/view?usp=sharing) |
+| Definition of Mapping to CDM Template (optional) | A mapping template of the mandatory and other significant attributes to the CDM should be defined. | Tables 14 and 15 in [D5.6](https://cancerimage.eu/wp-content/uploads/2026/02/D5.6.-Minimum-Data-Federation-and-Interoperability-Framework.pdf) |
 | ETL process | The ETL tool should be applied to map the clinical and imaging data to the CDM. | - [https://bio.tools/eetl_toolset](https://bio.tools/eetl_toolset) |
-| Development of Mediator Component (optional) | Develop a mediator to connect the local searching API with the federated explorer. | - Section 5.2.1 Dataset in a Federated Node. subsection "Guidelines for creating a mapping component" in [D5.6](https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d_fs/view?usp=sharing) |
+| Development of Mediator Component (optional) | Develop a mediator to connect the local searching API with the federated explorer. | - Section 5.2.1 Dataset in a Federated Node. subsection "Guidelines for creating a mapping component" in [D5.6](https://cancerimage.eu/wp-content/uploads/2026/02/D5.6.-Minimum-Data-Federation-and-Interoperability-Framework.pdf) |
 | Deployment of search components. | Deploy the Beam Proxy and the Focus query dispatcher. | - [https://eucaim.gitbook.io/enduserguide/6-userguide4members](https://eucaim.gitbook.io/enduserguide/6-userguide4members) |
 
 <br>

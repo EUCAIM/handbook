@@ -29,7 +29,7 @@ Data holders who opt to host the data locally must set up a local node capable o
 
 [Table 8](Federated.md#tab_localnodespecthree): _Minimum hardware requirements for Tier 3 nodes_
 
-A detailed description on the needs and components required for the local node can be found in [D5.6](https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d_fs/view?usp=sharing%20), section 3.7.
+A detailed description on the needs and components required for the local node can be found in [D5.6](https://cancerimage.eu/wp-content/uploads/2026/02/D5.6.-Minimum-Data-Federation-and-Interoperability-Framework.pdf), section 3.7.
 
 The processing capacity should be dimensioned to the amount of data available and it should be audited periodically.
 
@@ -63,7 +63,7 @@ The registration of the dataset on the public catalogue has been described in se
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Set up of the local catalogue                 | Deployment of a local instance of the catalogue to populate it with the information of the datasets provided by the Data Holder                                                                                                                                                                                                              | [Gitlab repository](https://gitlab.com/radiology/infrastructure/studies/eucaim/molgenis-emx2-eucaim)                                                                       |
 | Population of the data                        | Data should follow the EUCAIM interoperability schema. A sample file can be used to fill-in the information of the datasets and to create the schemas on the database. Detailed information is provided in [https://eucaim.gitbook.io/enduserguide/](https://eucaim.gitbook.io/enduserguide/6-userguide4members#id-6.3.2.-tier-1-compliance) | [Sample file with the schema](https://docs.google.com/spreadsheets/d/19DDoFq-_Bj7wfEf5KjkISe13kS-W5EYQ/edit?usp=sharing\&ouid=102741390744373897413\&rtpof=true\&sd=true). |
-| Federation of the catalogue **(in progress)** | Enable automatic synchronisation of the local catalogue with the central one.                                                                                                                                                                                                                                                                | In progress                                                                                                                                                                |
+| Federation of the catalogue **(in progress)** | Enable automatic synchronisation of the local catalogue with the central one.              | In progress                |
 
 [Table 9](Federated.md#tab_tier1fednode): Set up a federated Catalogue
 

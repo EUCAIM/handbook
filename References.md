@@ -5,7 +5,7 @@
 
 \[2\] D4.4 Rules for Participation, [https://drive.google.com/file/d/1QCAbv5nPpykos16-hmtKxFmb1h7YxP9B/view?usp=sharing](https://drive.google.com/file/d/1QCAbv5nPpykos16-hmtKxFmb1h7YxP9B/view?usp=sharing) 
 
-\[3\] D5.6 Minimum Data Federation and Interoperability Framework [https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d\_fs/view?usp=sharing](https://drive.google.com/file/d/1URY8jtofLQpokTh7Hzag2wFFV9r1d_fs/view?usp=sharing) 
+\[3\] D5.6 Minimum Data Federation and Interoperability Framework [https://cancerimage.eu/wp-content/uploads/2026/02/D5.6.-Minimum-Data-Federation-and-Interoperability-Framework.pdf](https://cancerimage.eu/wp-content/uploads/2026/02/D5.6.-Minimum-Data-Federation-and-Interoperability-Framework.pdf) 
 
 \[4\] D2.4 Training Evaluation: [https://drive.google.com/file/d/1hNCkrP8UutNiPexzAzpsdt3WDOwdVh66/view?usp=drive\_link](https://drive.google.com/file/d/1hNCkrP8UutNiPexzAzpsdt3WDOwdVh66/view?usp=drive_link) 
 
