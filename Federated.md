@@ -2,6 +2,11 @@
 
 This section describes the requirements and process of setting up a node, including the security and privacy considerations and the expected Service Level Agreement. It describes the requirements and setps to achieve Tier 1 to Tier 3 compliance. Additionally, [section 7.5](Federated.md#id-7.5.-setting-up-a-local-node-with-mini-node) describes the EUCAIM mini-node Software package, which provides an open-source solution for setting up a minimal node, capable of reachin Tier-2 compliance at the level of the services and Tier-3 compliance at the level of the data. Data Holders that have not set up their own node could find in this package a helpful software stack to deploy their own nodes.
 
+The federated node basically implies the following actions, according to each interoperability layer:
+- Tier 1: (Optional) Set up a local catalogue and federate it to the central catalogue.
+- Tier 2: Set up a mediator component to adapt the API of the federated search explorer to the local search API, matching the format defined in the hyperontology for the searching terms.
+- Tier 3: Set up a processing environment and a materialisator for the federated processing.
+
 ## 7.1. Setting up the node
 
 Data holders who opt to host the data locally must set up a local node capable of storing and processing the data extracted, anonymised and standardised. The requirements for the node depend on the amount of data to be processed. [Table 7](Federated.md#tab_localnodespectwo) and [Table 8](Federated.md#tab_localnodespecthree) show the minimum required expected for Tier 2 and Tier 3 node.
@@ -10,22 +15,24 @@ Data holders who opt to host the data locally must set up a local node capable o
 
 | Hardware               | Minimum                  |
 | ---------------------- | ------------------------ |
-| CPU                    | 4 Cores /8 Threads       |
+| CPU                    | 4 Cores / 8 Threads      |
 | RAM                    | 32 GB                    |
 | Operating System Drive | 160+ GB SSD              |
-| Data Storage           | 1x (Dataset size) Drives |
+| Data Storage           | 1x (Dataset size)        |
 
 [Table 7](Federated.md#tab_localnodespectwo): _Minimum hardware requirements for Tier 2 nodes._
 
 ### &#x20;<a href="#tab_localnodespecthree" id="tab_localnodespecthree"></a>
 
-| Hardware    | Minimum/Recommended                                                                      |
-| ----------- | ---------------------------------------------------------------------------------------- |
-| CPU         | Minimum: 16 Cores >=1.8GHZ or 12 Cores >=3.0Ghz Recommended: 32 Cores /64 Threads 3.0Ghz |
-| RAM         | Minimum: 64GB Recommended: 128 GB ECC                                                    |
-| Storage     | Minimum: 1x(Dataset size) Recommended: 2x(Dataset size)                                  |
-| GPU         | Minimum: >150 Tensor Cores 16GB VRAM                                                     |
-| Motherboard | 4+ RAM Slot                                                                              |
+| CPU | Minimum: 16 Cores \>=1.8GHZ or 12 Cores \>=3.0Ghz Recommended: 32 Cores / 64 Threads 3.0Ghz |
+| Hardware            | Minimum/Recommended                                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| CPU                 | Minimum: 16 Cores >=1.8GHZ or 12 Cores >=3.0Ghz <br/>Recommended: 32 Cores /64 Threads 3.0Ghz                          |
+| RAM                 | Minimum: 64GB <br/>Recommended: 128 GB ECC                                                                             |
+| Storage             | For Operating Sistem: 256 GB SSD <br/>Minimum for data: 1.2x(Dataset size) <br/>Recommended for data: 2x(Dataset size) |
+| GPU                 | Minimum: >150 Tensor Cores 16GB VRAM                                                                                   |
+| Motherboard         | 4+ RAM Slot                                                                                                            |
+| Internet connection | 100mbps (baseline) <br/>Each DH must make best efforts to provide the best possible connection to their Node. <br/>Network performance will directly affect node stability and can invalidate AI training. |
 
 [Table 8](Federated.md#tab_localnodespecthree): _Minimum hardware requirements for Tier 3 nodes_
 
@@ -50,7 +57,8 @@ The compliance at the Tier 1 level implies that the metadata of the datasets fol
 The registration of the dataset on the public catalogue has been described in section 5.1 / Table 4 of this document. The set up of a local catalogue is optional and it is described in [figure 11](Federated.md#fig_tier1fednode) and [table 9](Federated.md#tab_tier1fednode), and comprise the following actions:
 
 * Dataset metadata preparation. This implies identifying the data to be shared and packaged into a dataset, the extraction of the metadata and the appropriate coding into the EUCAIM DCAT-AP terminology and vocabularies. This has been covered in section 5 of this document.
-* Setup of a local instance of the catalogue. We recommend using Molgenis and the Catalogue application developed by ErasmusMC. Deployment can be done through a Docker container or a Kubernetes manifest.
+* Setup of a local instance of the catalogue. We recommend using Molgenis and the Catalogue application developed by ErasmusMC. Deployment can be done through a Docker container or a Kubernetes manifest and includes a molgenis instance, a postgress database and a catalogue application. The catalogue code is available in [GitLab](https://gitlab.com/radiology/infrastructure/studies/eucaim/molgenis-emx2-eucaim), including the [Dockerfile](https://gitlab.com/radiology/infrastructure/studies/eucaim/molgenis-emx2-eucaim/-/blob/feature/rewrite_build/Dockerfile?ref_type=heads) of the catalogue container and the [Docker Compose](https://gitlab.com/radiology/infrastructure/studies/eucaim/molgenis-emx2-eucaim/-/raw/master/docker-compose.yml?ref_type=heads) file.
+* Population of the data following the EUCAIM interoperability schema. This [sample file](https://docs.google.com/spreadsheets/d/19DDoFq-_Bj7wfEf5KjkISe13kS-W5EYQ/edit?usp=sharing&ouid=102741390744373897413&rtpof=true&sd=true) can be used to fill-in the information of the datasets and to create the schemas on the database.
 * In the coming future, we will support the federation of datasets through a pull model in which datasets’ metadata is harvested by the central catalogue. This will require deploying a local registry and populating it with the information of the DH’s datasets.
 
 ### &#x20;<a href="#fig_tier1fednode" id="fig_tier1fednode"></a>
@@ -80,8 +88,6 @@ The steps needed to integrate the local node are described in [figure 12](Federa
 
 <figure><img src=".gitbook/assets/image11.png" alt="" width="600"><figcaption><p>Figure 12: Actions to integrate a federated node in the tier 2 level.</p></figcaption></figure>
 
-The actions corresponding to the federated search are described in the gitbook ([https://eucaim.gitbook.io/enduserguide/6-userguide4members#id-6.3.-contribution-through-a-federated-node](https://eucaim.gitbook.io/enduserguide/6-userguide4members#id-6.3.-contribution-through-a-federated-node)) .
-
 The steps that need to be developed are the following:
 
 | #  | Action                                      | Documentation / Links                                                                                                                                                                                                                                                                                                                        |
@@ -95,33 +101,48 @@ Once you have the component developed and deployed, the integration with the fed
 
 ### **7.3.1. Node Registration and Deployment**
 
-After submitting and having your registration request accepted, perform the following steps:
+We will take the CHAIMELEON node as example.  
+All required files to deploy the federated search components in the CHAIMELEON node over a Kubernetes cluster are available in:  
+[https://github.com/EUCAIM/k8s-deployments/tree/main/federated-search/chaimeleon](https://github.com/EUCAIM/k8s-deployments/tree/main/federated-search/chaimeleon)
+
+Next we are going to see step by step how to deploy using docker-compose.
+
+After submitting and having your registration request accepted, you will have the provider ID for your federated node, which is a short name chosen by you and accepted by the validator to be unique in the federation. In our example it is `chaimeleon`.
 
 **1. Generate and Submit a CSR**
 
-Create a Certificate Signing Request (CSR) with the Common Name (CN) set to your provider’s ID (the provider ID or your\_id is an identifier for your organization chosen by you and accepted by the validator) plus the domain `broker.eucaim.cancerimage.eu`:
-
+Create a Certificate Signing Request (CSR) with the Common Name (CN) set to your provider ID plus the domain `broker.eucaim.cancerimage.eu`: 
 ```
-openssl req -key $REPO_ID.priv.pem -new \
-            -subj "/CN=$REPO_ID.broker.eucaim.cancerimage.eu/C=X/L=Y" \
-            -out $REPO_ID.csr
+PROVIDER_ID=chaimeleon
+openssl genrsa --out proxy.priv.pem 2048
+openssl req -key proxy.priv.pem -new \
+            -subj "/CN=$PROVIDER_ID.broker.eucaim.cancerimage.eu/C=ES/L=Valencia" \
+            -out $PROVIDER_ID.csr
 ```
+Note that:
+ * `proxy.priv.pem` is the private key file generated containing the private part of your certificate for your node (don't send to anyone, neither to the central services administrators).
+ * The value for `CN` (Common Name) should be your provider ID followed by the domain `broker.eucaim.cancerimage.eu` (remember the provider ID should have been confirmed to you as a reply to the registration.
+ * The values for `C` and `L` are Country code and Locality of your node.
+ * The `$PROVIDER_ID.csr` contains the public part of your generated certificate to be signed.
 
-* `$PROVIDER_ID.priv.pem`: Name of the private key file to be generated.
-* `CN`: Should be `{your_id}.broker.eucaim.cancerimage.eu.` The value of `{your_id}` should have been provided as a reply to the registration.
-* `C=`, `L=`: Country and locality codes as needed.
-
-Then, submit the resulting `.csr` file to the central node managers through the helpdesk, as a reply to the opened ticket.
+Then, submit the resulting `.csr` file to the central services administrators through the helpdesk, as a reply to the opened ticket.
 
 **2. Receive the Root CA**
 
-The central node manager will sign your CSR and return your certificate and provide you with the Root CA certificate file (e.g., root.crt.pem). Save the Root CA file along with your proxy private key (proxy.pem) in a secure location (e.g., a ./secrets folder), and make sure the paths match the configuration in your docker-compose.yml file.
+The central services administrators will take the CSR file to sign and register your certificate and, in the other hand, they will provide you with the Root CA certificate file (e.g., `root.crt.pem`). 
+Save the Root CA file along with your private key (`proxy.pem`) in a secure location (e.g., a ./secrets folder), and make sure the paths match the configuration in your docker-compose.yml file.
 
 **3. Deploy Beam Proxy and Focus**
 
-To deploy a Beam node using the samply/beam-proxy:main Docker image alongside the Focus service, you can consolidate both services within a single docker-compose.yml file. This setup facilitates communication between your local node and the central Beam Broker, with Focus handling the dispatch and translation of incoming Beam tasks to your local endpoints and returning results via the Beam Proxy.
+To deploy a Beam Proxy service alongside the Focus service, you can consolidate both services within a single docker-compose.yml file. 
+This setup facilitates communication between your local node and the central Beam Broker, with Focus handling and translating the incoming Beam tasks to your local endpoint and returning results via the Beam Proxy.
 
-Here's an example configuration:
+Let's generate previously a random key to authenticate Focus towards the Beam Proxy:
+```
+export FOCUS_KEY=$(tr -dc 'A-Za-z0-9-.' < /dev/random | head -c 21)
+```
+
+Here's an example configuration for a docker-compose YAML file:
 
 ```
 version: '3.8'
@@ -131,50 +152,52 @@ services:
     image: samply/beam-proxy:main
     environment:
       - BROKER_URL=https://broker.eucaim.cancerimage.eu
-      - PROXY_ID=${PROVIDER_ID}.broker.eucaim.cancerimage.eu
-      - APP_FOCUS_KEY=${APP1_KEY}               # Randomly generated focus key
+      - PROXY_ID=${PROVIDER_ID}.broker.eucaim.cancerimage.eu   # The same previously used in the CSR file generation
+      - APP_focus_KEY=${FOCUS_KEY}               # Randomly generated focus key
       - PRIVKEY_FILE=/run/secrets/proxy.pem     # Your proxy private key
       - BIND_ADDR=0.0.0.0:8081                  # Listening address
-      - http_proxy=${HTTP_PROXY}                # If needed
-      - https_proxy=${HTTPS_PROXY}              # If needed
+    ports:
+      - 8081:8081
     secrets:
       - proxy.pem                               # Proxy private key       
       - root.crt.pem                            # Root CA certificate
     networks:
       - beam-network
   focus:
-    image: samply/focus:latest
+    image: samply/focus:0.24
     environment:
       - BEAM_PROXY_URL=http://beam-proxy:8081      # Address where the BEAM Proxy is reachable within the Docker network       
-      - ENDPOINT_URL=http://mediator-service:8089/ # Address of your local Mediator endpoint
-      - API_KEY=${APP1_KEY}                        # Same key as APP_FOCUS_KEY
+      - API_KEY=${FOCUS_KEY}                        # Same key as APP_FOCUS_KEY
       - BEAM_APP_ID_LONG=focus.${PROVIDER_ID}.broker.eucaim.cancerimage.eu
+      - ENDPOINT_URL=http://mediator-service:8089/ # Address of your local Mediator endpoint
+      - ENDPOINT_TYPE=omop
+      - PROVIDER=CHAIMELEON
     depends_on:
       - beam-proxy
       - mediator-service
     networks:
       - beam-network
+
 secrets:
   proxy.pem:
     file: ./secrets/proxy.pem
   root.crt.pem:
     file: ./secrets/root.crt.pem
+
 networks:
   beam-network:
     driver: bridge
 ```
+The required variables you should check out: 
+ - `ENDPOINT_URL`: The endpoint of the mediator service you must have somewhere.
+ - `ENDPOINT_TYPE`: You can see in the Focus README (see below) all the possible values.
+ - `PROVIDER`: The name you want to appear in the federated search results.
+ - `PROVIDER_ICON`: Add if you want to custom the icon appearing in the search results (Base64 encoded icon in PNG format, e.g.: `cat logo.png | base64 -w 0`).
 
-The variables required are:
+For additional optional configuration, see the Focus README:  
+[https://github.com/samply/focus?tab=readme-ov-file\#optional-variables](https://github.com/samply/focus?tab=readme-ov-file#optional-variables) 
 
-```
-- BEAM_PROXY_URL  
-- ENDPOINT_URL  
-- API_KEY  
-- BEAM_APP_ID_LONG
-```
 
-For additional optional configuration, see the Focus README:\
-[https://github.com/samply/focus?tab=readme-ov-file#optional-variables](https://github.com/samply/focus?tab=readme-ov-file#optional-variables) You can generate a random key for the `API_KEY`, for example, by running: `$ head -c 21 /dev/urandom`
 
 **4. Final Checks and Deployment**
 
@@ -339,13 +362,13 @@ The following must exist in the installation directory:
    * Template: `eucaim-node-realm.json`
    * Contains: client secrets, realm settings, identity providers
 
-Before being able to download the repositories, you have to request access to the `k8s-deploy-node` repository in https://github.com/EUCAIM/k8s-deploy-node.
+Let's download all the source code required from the repositories.  
 
 1.  **Prepare the environment**
 
     ```bash
     # Clone this repository
-    git clone <this-repo-url>
+    git clone https://github.com/EUCAIM/mini-node.git
     cd mini-node
     # Clone k8s-deploy-node (mininode branch) and jobman inside mini-node
     git clone --branch mininode git@github.com:EUCAIM/k8s-deploy-node.git

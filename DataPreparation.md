@@ -257,31 +257,31 @@ _Notes before you start_: 1. You may create your own tabular file or use this ex
 2. Please make sure it contains the _exact_ variables' names on the first row (matching the variable’s names from your source dataset), and the PatientID as the first variable.
 3. Separate all episodes into different tabs as described above, except for Diagnosis that belongs to the Overarching episode.
 
-* Note: episodes may correspond to the following: Treatment, Progression, Relapse, Remission, Active Surveillance.
+   * Note: episodes may correspond to the following: Treatment, Progression, Relapse, Remission, Active Surveillance.
 
 4. For each variable of your dataset, find the corresponding entity and data element name (see data element tab), and add both under the variable name on line 2 and 3, respectively. Important: for several entities, the Code attribute must be accompanied by the Category attribute.
 
-* Example 1 with “Imaging acquisition” as Procedure: we need to specify the sequence (CT, MRI) as “Code”, and assign to it “imaging” as Category. See in the Overarching episode tab on this dataset example, columns L-M. Note that the name of the variable is then merged on both columns.
+   * Example 1 with “Imaging acquisition” as Procedure: we need to specify the sequence (CT, MRI) as “Code”, and assign to it “imaging” as Category. See in the Overarching episode tab on this dataset example, columns L-M. Note that the name of the variable is then merged on both columns.
 
-* Example 2 with “Smoking Status” as Medical History: we need to specify the status value itself (smoker, non-smoker, etc) as “Code”, and assign to it “Observation” as Category. See in the Overarching episode tab on this dataset example, columns P-Q. Again, the name of the variable must be merged on both columns.
+   * Example 2 with “Smoking Status” as Medical History: we need to specify the status value itself (smoker, non-smoker, etc) as “Code”, and assign to it “Observation” as Category. See in the Overarching episode tab on this dataset example, columns P-Q. Again, the name of the variable must be merged on both columns.
 
 5. For each variable of your dataset, please provide an example value on line 5 (add the value as it is spelled exactly in your dataset)
 6. For each variable of your dataset:
-
-* if the variable follows strictly a specific standard, please provide the name of the standard on line 4
-
-  * Example in the Overarching episode tab: column J, the “Histological type” variable strictly follows the SNOMEDCT standard; line 4 specifies “SNOMEDCT”, and an example value is provided on line 5. Important: both information must be separated by a comma, without space
-
-* if the variable follows specific standard with in-house coding or remaining, please provide the name of the standard on line 4, and provide the correspondence between all possible values from your dataset and the standard values on lines 6 and onwards
-
-  * Example 1 in the Overarching episode tab: column H, the “Tumor site: Region” variable follows the SNOMEDCT standard using an in-house coding; line 4 specifies “SNOMEDCT”, an example value is provided on line 5, and correspondence for all possible values present in the dataset to the SNOMEDCT codes is listed on lines 6-9, separated by a comma.
-
-  * Example 2 in the Overarching episode tab: column K, the “Histological subtype” variable follows the SNOMEDCT standard using an in-house naming; line 4 specifies “SNOMEDCT”, an example value is provided on line 5, and correspondence for all possible values present in the dataset to the SNOMEDCT codes is listed in lines 6-8, separated by a comma.
-
-* if the variable does not follow a specific standard, please state “custom” on line 4, and provide the list of all possible values from your dataset for that variable on lines 6 and onwards
-
-  * Example in the Overarching episode tab : column I, the “Tumor Site : Laterality” variable does not follow a standard, but only uses the label “Left” or “Right”; in that case line 4 specifies “custom”, an example value is provided on line 5, and all possible values present in the dataset (here “Left” and “Right” is listed on lines 6-7.
-
+   
+   * if the variable follows strictly a specific standard, please provide the name of the standard on line 4
+   
+     * Example in the Overarching episode tab: column J, the “Histological type” variable strictly follows the SNOMEDCT standard; line 4 specifies “SNOMEDCT”, and an example value is provided on line 5. Important: both information must be separated by a comma, without space
+   
+   * if the variable follows specific standard with in-house coding or remaining, please provide the name of the standard on line 4, and provide the correspondence between all possible values from your dataset and the standard values on lines 6 and onwards
+   
+     * Example 1 in the Overarching episode tab: column H, the “Tumor site: Region” variable follows the SNOMEDCT standard using an in-house coding; line 4 specifies “SNOMEDCT”, an example value is provided on line 5, and correspondence for all possible values present in the dataset to the SNOMEDCT codes is listed on lines 6-9, separated by a comma.
+   
+     * Example 2 in the Overarching episode tab: column K, the “Histological subtype” variable follows the SNOMEDCT standard using an in-house naming; line 4 specifies “SNOMEDCT”, an example value is provided on line 5, and correspondence for all possible values present in the dataset to the SNOMEDCT codes is listed in lines 6-8, separated by a comma.
+   
+   * if the variable does not follow a specific standard, please state “custom” on line 4, and provide the list of all possible values from your dataset for that variable on lines 6 and onwards
+   
+     * Example in the Overarching episode tab : column I, the “Tumor Site : Laterality” variable does not follow a standard, but only uses the label “Left” or “Right”; in that case line 4 specifies “custom”, an example value is provided on line 5, and all possible values present in the dataset (here “Left” and “Right” is listed on lines 6-7.
+   
 > To validate your clinical dataset image metadata structure, you may submit a ticket to the “ETL data ingestion” group, including a sample dataset with synthetic data through [EUCAIM Helpdesk](https://help.cancerimage.eu/).
 
 #### **Step 2: Imaging correspondence with clinical data**
