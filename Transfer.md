@@ -134,7 +134,7 @@ Datasets uploaded to UPV reference node won’t be immediately published, it is 
 #### 6.2.2.4. Upload metadata
 The description of this user action refers to the release of a dataset as a discoverable one. This implies two steps:
 
-1. **Release the dataset** in the catalogue of the node. To do it you have to access the [dataset explorer](https://eucaim-node.i3m.upv.es/dataset-service), look for the dataset (initially with the flag "draft", only visible to you) and enter the details page (Figure 6.13). Here verify that the draft of dataset is correct, review all the properties, ensure all of them are filled in, including the contact information and license. You can even create a Virtual Environment following the instructions given in Section 4 to explore the contents. Then you can "release" the dataset, there is an option for that in the "Actions" button.
+1. **Release the dataset** in the catalogue of the node. To do it you have to access the [dataset explorer](https://eucaim-node.i3m.upv.es/dataset-service), look for the dataset (initially with the flag "draft", only visible to you) and enter the details page (Figure 6.13). Here verify that the draft of dataset is correct, review all the properties, ensure all of them are filled in, including the contact information and license. Optionally you can even create a Virtual Research Environment if you have the "datascientist" role to explore and check de contents (detailed in [section 4.8 of the user guide](https://eucaim.gitbook.io/enduserguide/4-userguideforresearchers#id-4.8.-reference-node-at-upv)). Then you can "release" the dataset, there is an option for that in the "Actions" button.
 
 ![Figure 6.13. Dataset metadata update.](figures/image6-13.avif)
 
