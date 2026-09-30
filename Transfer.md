@@ -63,9 +63,17 @@ Once the application is executed, you will have to log in using your **UPV refer
 
  [Main page](https://eucaim-node.i3m.upv.es) -> User Account -> Account security -> Signing in -> Add a password. 
  
- Once logged in, select the type of data you intend to upload first: imaging or clinical. 
+Once logged in, select the type of data you intend to upload first: imaging or clinical. 
 
 ![Figure 6.2. (Left) Log in menu. (Right) Selection of data type.](figures/image6-2.avif)
+
+**Advanced settings (troubleshooting connection issues)**
+
+Since version 1.3, the login screen of the QP-Insights Uploader includes a **Settings** option (bottom) to configure the connection when the default setup fails to connect — a situation frequently found in hospital or institutional networks:
+
+* **Use system CA certificates**: enable this if you get a certificate error mentioning an untrusted, self-signed certificate in the chain. This usually means there is a proxy in your network (e.g. hospital firewall) that intercepts HTTPS traffic and re-encrypts it with its own certificates. These certificates are trusted by your browser/OS but not by the uploader app by default, since it uses its own certificate store.
+* **HTTP/HTTPS proxy**: if the connection cannot be established at all (and it is confirmed not to be a server-side issue), your network's firewall may only allow outbound connections through a proxy. Fill in the IP/host and port for the HTTP and HTTPS proxy — you can copy this configuration from your browser or operating system, or ask your IT department.
+
 
 **Upload of images** 
 
@@ -79,15 +87,13 @@ The application will scan all patients, studies, and series present in the selec
 
 **Upload of clinical data** 
 
-Once medical imaging data is uploaded, you can proceed with the clinical data. 
-
-NOTE: if you decide to convert the data through the **ETL** application inside the node you will be able to upload the clinical data directly to the ETL desktop.
-
 After selecting **upload of clinical data** select the target project. Then, upload the file containing the clinical data. Both Excel and CSV formats are supported. Please ensure that **the first column is labeled PatientID** and the values in this column **match the DICOM PatientID tag** (0010, 0020) of your image data. This will ensure your clinical data is correctly linked to the image data. As with image uploads, any errors will generate a downloadable tabular report. 
 
+**Note**: A unique clinical data file is uploaded for all the timepoints, please look at Section 5.3 for instructions on how to structure this file. 
 
 ![Figure 6.5. Upload of clinical data. (Left) Select the patients which clinical data you want to update. (Right) Upload status.](figures/image6-5.png)
 
+> **Note on deleting images.** Users cannot delete already uploaded images/studies directly through QP-Insights. If uploaded data needs to be removed (e.g. wrong patient, duplicate, or non-compliant upload), please open a ticket in the [helpdesk](https://help.cancerimage.eu),  specifying the project, subject/case and study to be deleted.
 
 **Accessing Uploaded Data** 
 
