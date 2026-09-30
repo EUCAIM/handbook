@@ -93,7 +93,7 @@ After selecting **upload of clinical data** select the target project. Then, upl
 
 ![Figure 6.5. Upload of clinical data. (Left) Select the patients which clinical data you want to update. (Right) Upload status.](figures/image6-5.png)
 
-> **Note on deleting images.** Users cannot delete already uploaded images/studies directly through QP-Insights. If uploaded data needs to be removed (e.g. wrong patient, duplicate, or non-compliant upload), please open a ticket in the [helpdesk](https://help.cancerimage.eu),  specifying the project, subject/case and study to be deleted.
+> **Note on deleting images.** Users cannot delete already uploaded images/studies directly through QP-Insights. If uploaded data needs to be removed (e.g. wrong patient, duplicate, or non-compliant upload), please open a ticket in the [helpdesk](https://help.cancerimage.eu),  specifying the project, subject/case and study to be deleted, and assign to the group "UPV Reference node". If the study is not yet included in a released dataset there will not be a problem, otherwise we will have to consider creating a new version of the dataset and invalidating the previous.
 
 **Accessing Uploaded Data** 
 
