@@ -26,7 +26,7 @@ This section summarises in a comprehensive table all the actions to be performed
 
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
-| Contact point for the negotiation (Only in federated nodes) | The LS-AAl details of the data holder delegate who will interact with the Data User through the negotiator. | - [Registration of users in EUCAIM LS-AAI.](https://drive.eucaim.cancerimage.eu/apps/files/files/2138?dir=/General%20Documents&editing=false&openfile=true) |
+| Contact point for the negotiation (Only in federated nodes) | The LS-AAl details of the data holder delegate who will interact with the Data User through the negotiator. | - [Registration of users in EUCAIM LS-AAI.](https://drive.eucaim.cancerimage.eu/s/G965GrqaFHGwwwJ) |
 | Get Familiar with EUCAIM | <ul><li>Follow the EUCAIM training material and brief documents.</li><li>Browse architecture and</li><li>Watch webinars and videos.</li></ul> | - [https://dashboard.eucaim.cancerimage.eu](https://dashboard.eucaim.cancerimage.eu)<br>- [https://eucaim.gitbook.io/end-user-guide](https://eucaim.gitbook.io/end-user-guide)<br>- [https://www.youtube.com/@EUCAIM](https://www.youtube.com/@EUCAIM)<br>- [https://training.eucaim.cancerimage.eu/](https://training.eucaim.cancerimage.eu/) |
 
 <br>

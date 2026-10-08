@@ -26,7 +26,7 @@ This section summarises in a comprehensive table all the actions to be performed
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
 | Get Familiar with EUCAIM | <ul><li>Follow the EUCAIM training material and brief documents.</li><li>Browse architecture and</li><li>Watch webinars and videos.</li></ul> | - [https://dashboard.eucaim.cancerimage.eu](https://dashboard.eucaim.cancerimage.eu)<br>- [https://eucaim.gitbook.io/end-user-guide](https://eucaim.gitbook.io/end-user-guide)<br>- [https://www.youtube.com/@EUCAIM](https://www.youtube.com/@EUCAIM)<br>- [https://training.eucaim.cancerimage.eu/](https://training.eucaim.cancerimage.eu/) |
-| Request a EUCAIM User | Request a EUCAIM User in the Dashboard through LS-AAI. | - [Registration of users in EUCAIM](https://drive.eucaim.cancerimage.eu/apps/files/files/2138?dir=/General%20Documents&editing=false&openfile=true) |
+| Request a EUCAIM User | Request a EUCAIM User in the Dashboard through LS-AAI. | - [Registration of users in EUCAIM](https://drive.eucaim.cancerimage.eu/s/G965GrqaFHGwwwJ) |
 
 <br>
 
