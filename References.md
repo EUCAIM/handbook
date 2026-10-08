@@ -9,7 +9,7 @@
 
 \[4\] D2.4 Training Evaluation: [https://drive.google.com/file/d/1hNCkrP8UutNiPexzAzpsdt3WDOwdVh66/view?usp=drive\_link](https://drive.google.com/file/d/1hNCkrP8UutNiPexzAzpsdt3WDOwdVh66/view?usp=drive_link) 
 
-\[5\] Registration of users in EUCAIM LS-AAI. [https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) 
+\[5\] Registration of users in EUCAIM LS-AAI. [https://drive.eucaim.cancerimage.eu/apps/files/files](https://drive.eucaim.cancerimage.eu/apps/files/files/2138?dir=/General%20Documents&editing=false&openfile=true) 
 
 \[6\] EUCAIM Dashboard Page. [https://dashboard.eucaim.cancerimage.eu/documentation](https://dashboard.eucaim.cancerimage.eu/documentation) 
 

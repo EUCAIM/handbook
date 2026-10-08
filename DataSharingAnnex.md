@@ -26,7 +26,7 @@ This section summarises in a comprehensive table all the actions to be performed
 
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
-| Contact point for the negotiation (Only in federated nodes) | The LS-AAl details of the data holder delegate who will interact with the Data User through the negotiator. | - [Registration of users in EUCAIM LS-AAI.](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) |
+| Contact point for the negotiation (Only in federated nodes) | The LS-AAl details of the data holder delegate who will interact with the Data User through the negotiator. | - [Registration of users in EUCAIM LS-AAI.](https://drive.eucaim.cancerimage.eu/apps/files/files/2138?dir=/General%20Documents&editing=false&openfile=true) |
 | Get Familiar with EUCAIM | <ul><li>Follow the EUCAIM training material and brief documents.</li><li>Browse architecture and</li><li>Watch webinars and videos.</li></ul> | - [https://dashboard.eucaim.cancerimage.eu](https://dashboard.eucaim.cancerimage.eu)<br>- [https://eucaim.gitbook.io/end-user-guide](https://eucaim.gitbook.io/end-user-guide)<br>- [https://www.youtube.com/@EUCAIM](https://www.youtube.com/@EUCAIM)<br>- [https://training.eucaim.cancerimage.eu/](https://training.eucaim.cancerimage.eu/) |
 
 <br>
@@ -58,7 +58,7 @@ This section summarises in a comprehensive table all the actions to be performed
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
 | Create local catalogue (optional) | Data should follow the EUCAIM interoperability schema. | - [Sample file with the schema](https://docs.google.com/spreadsheets/d/19DDoFq-_Bj7wfEf5KjkISe13kS-W5EYQ/edit?usp=sharing&ouid=102741390744373897413&rtpof=true&sd=true) <br>- [End User Guide](https://github.com/EUCAIM/End-User-Guide/blob/main/6-UserGuide4Members) |
-| Make a request for catalogue registration | Create a helpdesk ticket on the category catalogue, providing the link to the dataset in the local catalogue, if available, or the completed catalogue metadata spreadsheet. The helpdesk team will contact you back informing if the dataset has been properly registered or requesting more information. | -[https://help.cancerimage.eu](https://help.cancerimage.eu)<br>- [Catalogue metadata spreadsheet ](https://u.i3m.upv.es/9gx81) |
+| Make a request for catalogue registration | Create a helpdesk ticket on the category catalogue, providing the link to the dataset in the local catalogue, if available, or the completed catalogue metadata spreadsheet. The helpdesk team will contact you back informing if the dataset has been properly registered or requesting more information. | -[https://help.cancerimage.eu](https://help.cancerimage.eu)<br>- [Datasets metadata catalogue template](https://github.com/EUCAIM/eucaim_dcat_ap/blob/main/releases/v2.0/EUCAIM_HealthDCAT_AP_Metadata_Template_v2.0.xlsx) |
 
 <br>
 

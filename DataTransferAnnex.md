@@ -26,7 +26,7 @@ This section summarises in a comprehensive table all the actions to be performed
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
 | Get Familiar with EUCAIM | <ul><li>Follow the EUCAIM training material and brief documents.</li><li>Browse architecture and</li><li>Watch webinars and videos.</li></ul> | - [https://dashboard.eucaim.cancerimage.eu](https://dashboard.eucaim.cancerimage.eu)<br>- [https://eucaim.gitbook.io/end-user-guide](https://eucaim.gitbook.io/end-user-guide)<br>- [https://www.youtube.com/@EUCAIM](https://www.youtube.com/@EUCAIM)<br>- [https://training.eucaim.cancerimage.eu/](https://training.eucaim.cancerimage.eu/) |
-| Request a EUCAIM User | Request a EUCAIM User in the Dashboard through LS-AAI. | - [Registration of users in EUCAIM](https://drive.google.com/file/d/1EsFYxbzqpyYKggyeKrKKw3FkVecDby8P/view) |
+| Request a EUCAIM User | Request a EUCAIM User in the Dashboard through LS-AAI. | - [Registration of users in EUCAIM](https://drive.eucaim.cancerimage.eu/apps/files/files/2138?dir=/General%20Documents&editing=false&openfile=true) |
 
 <br>
 
@@ -59,7 +59,7 @@ This section summarises in a comprehensive table all the actions to be performed
 | Action | Description | Documents |
 | ---------- | ---------- | ---------- |
 | Create and Publish the Dataset | The dataset has to be created according to the instructions in the Gitbook (section 6.2.2.3 for UPV and 6.2.3 for Health-RI). | - [User Guide for Data holders](https://eucaim.gitbook.io/enduserguide/6-userguide4members) |
-| Provide the dataset's metadata | Provide the metadata of the datasets according to the EUCAIM schema. In case of doubts with the terminology, use textual descriptions. | - [EUCAIM Dataset metadata](https://docs.google.com/spreadsheets/d/1cj6YzIAchHnEKlH612gO91WzHfEOB4TbwBrl9a0kgE0/edit?usp=sharing) or [Molgenis excel template](https://docs.google.com/spreadsheets/d/19DDoFq-_Bj7wfEf5KjkISe13kS-W5EYQ/edit?usp=sharing&ouid=102741390744373897413&rtpof=true&sd=true) |
+| Provide the dataset's metadata | Provide the metadata of the datasets according to the EUCAIM schema. In case of doubts with the terminology, use textual descriptions. | - [Datasets metadata catalogue template](https://github.com/EUCAIM/eucaim_dcat_ap/blob/main/releases/v2.0/EUCAIM_HealthDCAT_AP_Metadata_Template_v2.0.xlsx) or [Molgenis excel template](https://docs.google.com/spreadsheets/d/19DDoFq-_Bj7wfEf5KjkISe13kS-W5EYQ/edit?usp=sharing&ouid=102741390744373897413&rtpof=true&sd=true) |
 | Make a request of registry upload | Create a helpdesk ticket on the category catalogue, providing the spreadsheet file with the metadata information. The helpdesk team will contact you back informing if the dataset has been properly registered or requesting more information. | - [https://help.cancerimage.eu/](https://help.cancerimage.eu/) |
 | Verify the entries in the catalogue | Access the registry in the catalogue and verify the collection. | - [https://catalogue.eucaim.cancerimage.eu/#/collection/<\<identifier>>](https://catalogue.eucaim.cancerimage.eu/#/collection/%3C%3Cidentifier%3E%3E) |
 
