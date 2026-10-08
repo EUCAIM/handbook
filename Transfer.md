@@ -38,8 +38,6 @@ Open a ticket in [https://help.cancerimage.eu](https://help.cancerimage.eu), sel
 | :---- | :--------------- |
 | The details for downloading and installing the tool are available in [https://bio.tools/qp-insights\_uploader](https://bio.tools/qp-insights_uploader) . In case of trouble, you can request an issue in the helpdesk in the same category as above.  | The data ingestion tool for imaging is the Clinical Trial Processor (CTP). The standalone version can be downloaded here: [https://gitlab.com/radiology/infrastructure/data-curation-tools/ctp-standalone](https://gitlab.com/radiology/infrastructure/data-curation-tools/ctp-standalone). |
 
-> ⚠️ Attention! Please, do not proceed with the metadata release until you are declared legally compliant by your correspondent EUCAIM legal team member after providing all the requirements and the DTA/DSA has been signed by both the legal representative of your institution and EUCAIM’s Scientific Director (Dr. Luís Martí). 
-
 **Next steps.** 
 The next steps depends on the reference node used to transfer
 | UPV   | HealthRI         |
@@ -200,7 +198,7 @@ The project in XNAT should be set to protected (or public) to make the metadata 
 This is required for all datasets, including those in Tier 1. 
 The process of registration will be automated but it is manual for the current time being.
 
-The dataset schema can be downloaded from this [link](https://docs.google.com/spreadsheets/d/1cj6YzIAchHnEKlH612gO91WzHfEOB4TbwBrl9a0kgE0/edit?usp=sharing). 
+The dataset schema can be downloaded from this [link](https://github.com/EUCAIM/eucaim_dcat_ap/blob/main/releases/v2.0/EUCAIM_HealthDCAT_AP_Metadata_Template_v2.0.xlsx). 
 In case of doubts with the terminology, use textual descriptions. It is very important that the Identifier matches the id that the federated search will provide for this dataset, as it is the only field that cannot be changed afterwards. For example, in Figure 6.13 the id would be `c75d0998-85db-4c94-9d2c-346961f0c6f7`.
 
 Once you have filled in all the information, create a ticket on the [helpdesk](https://help.cancerimage.eu/) under the group "catalogue", providing the spreadsheet file with the metadata information. The helpdesk team will contact you back informing if the dataset has been properly registered or requesting more information. 
